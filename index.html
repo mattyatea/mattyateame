@@ -43,19 +43,12 @@
     <br><br>
     <h3>mattyaski.co の運用</h3>
     様々な年齢層などに向けたMisskeyサーバーの運用。<br>
-    ユーザー数 2,594人 (2023/07/07現在)<br>
+    ユーザー数 <div id="mattyaski_user"></div>人<br>
     総投稿数 約20万 (2023/07/07現在)<br>
     Misskeyサーバー 日本12位 (2023/07/07現在)<br>
     gaku-tab-love.comと同様にRaspberry Pi 4b 1台で運用<br>
     2023/07/02よりオンラインユーザー増加(20~40人から100~150人に)なったためryzen5 3500のメイン機も加勢させています<br>
     </p><br>
-    <h3>baldr-geek.net の管理、運用</h3>
-    特定のマニアへ向けたMisskeyサーバーの運用。<br>
-    ユーザー数 50人<br>
-    総投稿数 不明<br>
-    Misskeyサーバー ランキング不明<br>
-    共同管理者のサーバーで運用。<br>
-    <br>
     <h2>これ！やったことある！</h2>
     DDoS攻撃への対応
 
@@ -71,10 +64,6 @@
         <br><br>
     <h3>インターネットインフラ系</h3>
         Cloudflare : ちょっといじれる
-        <br>
-        Azure : ほんの少しだけ
-        <br>
-        AWS : ほんとうにちょっとだけ
     </p>
 </div>
 
@@ -85,4 +74,10 @@
         const spinner = document.getElementById('Loader');
         spinner.remove()
     }
+    		fetch("https://mattyaski.co/nodeinfo/2.0")
+				.then(response => response.json())
+				.then(data => {
+					document.getElementById("mattyaski_user").innerHTML = data.usage.users.total;
+					document.getElementById("mattyaski_posts").innerHTML = data.usage.localPosts;
+				});
 </script>
