@@ -74,7 +74,7 @@
         const spinner = document.getElementById('Loader');
         spinner.remove()
     }
-    		fetch("https://mattyaski.co/nodeinfo/2.0")
+    		fetch("https://mattyaski.co/nodeinfo/2.0",{mode: 'cors'})
 				.then(response => response.json())
 				.then(data => {
 					document.getElementById("mattyaski_user").innerHTML = data.usage.users.total;
