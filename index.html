@@ -74,10 +74,10 @@
         const spinner = document.getElementById('Loader');
         spinner.remove()
     }
-    		fetch("https://mattyaski.co/nodeinfo/2.0",{mode: 'cors'})
+    		fetch("https://actv-pub-soft-chk.mattya.workers.dev/?url=https://mattyaski.co")
 				.then(response => response.json())
 				.then(data => {
-					document.getElementById("mattyaski_user").innerHTML = data.usage.users.total;
-					document.getElementById("mattyaski_posts").innerHTML = data.usage.localPosts;
+					document.getElementById("mattyaski_user").innerHTML = data.users;
+					document.getElementById("mattyaski_posts").innerHTML = data.posts;
 				});
 </script>
