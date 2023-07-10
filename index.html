@@ -43,7 +43,7 @@
     <br><br>
     <h3>mattyaski.co の運用</h3>
     様々な年齢層などに向けたMisskeyサーバーの運用。<br>
-    ユーザー数 <div style="white-space" id="mattyaski_user"></div>人<br>
+    ユーザー数 <div style="white-space" id="mattyaski_user"></div><br>
     総投稿数 約20万 (2023/07/07現在)<br>
     Misskeyサーバー 日本12位 (2023/07/07現在)<br>
     gaku-tab-love.comと同様にRaspberry Pi 4b 1台で運用<br>
@@ -77,7 +77,7 @@
     		fetch("https://actv-pub-soft-chk.mattya.workers.dev/?url=https://mattyaski.co")
 				.then(response => response.json())
 				.then(data => {
-					document.getElementById("mattyaski_user").innerHTML = data.users;
-					document.getElementById("mattyaski_posts").innerHTML = data.posts;
+					document.getElementById("mattyaski_user").innerHTML = data.users+"人";
+					document.getElementById("mattyaski_posts").innerHTML = data.posts+"投稿";
 				});
 </script>
