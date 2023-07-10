@@ -42,16 +42,41 @@
     外部からの攻撃を受け、DBに大量の負荷がかかってしまうようになったため、リセットという形でまっちゃすきー。(mattyaski.co)を立ち上げた。
     <br><br>
     <h3>mattyaski.co の運用</h3>
-    様々な年齢層などに向けたMisskeyサーバーの運用。<br>
+	    誰でも自由に をテーマとしたMisskeyサーバーの運用<br>
     ユーザー数 <div style="white-space" id="mattyaski_user"></div>
     総投稿数 <div style="white-space" id="mattyaski_posts"></div>
     Misskeyサーバー 日本12位 (2023/07/07現在)<br>
-    gaku-tab-love.comと同様にRaspberry Pi 4b 1台で運用<br>
-    2023/07/02よりオンラインユーザー増加(20~40人から100~150人に)なったためryzen5 3500のメイン機も加勢させています<br>
+    Raspberry Pi 4b 1台で運用していました。<br>
+    2023/07/02よりオンラインユーザー増加(20~40人から100~150人に)なったため、ほかの自宅鯖で運用しています。<br>
+    </p><br>
+　　<h3>MiColor.link の運用</h3>
+    『Misskey発の文化発信』 をテーマとしたMisskeyサーバーの運用<br>
+    ユーザー数 <div style="white-space" id="micolor_user"></div>
+    総投稿数 <div style="white-space" id="micolor_posts"></div>
+    Raspberry Pi 4b 1台で運用しています<br>
     </p><br>
     <h2>これ！やったことある！</h2>
     DDoS攻撃への対応
 
+</div>
+
+<div style=" max-width: 850px; padding: 0;margin: 0em auto 2em;color: #FFF;background: #333333;border-bottom: solid 6px #333333;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);border-radius: 9px;padding: 1em;">
+    <h1 style="white-space: nowrap; display: inline-block;"> もってる鯖のスペック</h1>
+    <p><br>
+    <h3>自作ゲーミングPC兼鯖</h3>
+	CPU : Ryzen 5 3500<br>
+	    Memory : 32GB DDR4-3200<br>
+	    Storage : M.2SSD 1TB<br>
+	    Power Supply : 650W KRPW-BK650W/85+
+	    MotherBoard : A520M-HDV<br>
+        <br><br>
+    <h3>Raspberry Pi 4b</h3>
+        	CPU : Cortex-A72<br>
+	    Memory : 4GB<br>
+	    Storage : SSD 128GB (SATA To USB3.0)<br>
+	    Power Supply : ?
+	    MotherBoard : ?<br>
+    </p>
 </div>
 
 <div style=" max-width: 850px; padding: 0;margin: 0em auto 2em;color: #FFF;background: #333333;border-bottom: solid 6px #333333;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);border-radius: 9px;padding: 1em;">
@@ -79,5 +104,11 @@
 				.then(data => {
 					document.getElementById("mattyaski_user").innerHTML = data.users+"人";
 					document.getElementById("mattyaski_posts").innerHTML = data.posts+"投稿";
+				});
+	    		fetch("https://actv-pub-soft-chk.mattya.workers.dev/?url=https://micolor.link")
+				.then(response => response.json())
+				.then(data => {
+					document.getElementById("micolor_user").innerHTML = data.users+"人";
+					document.getElementById("micolor_posts").innerHTML = data.posts+"投稿";
 				});
 </script>
