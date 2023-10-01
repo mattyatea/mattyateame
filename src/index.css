@@ -10,4 +10,11 @@
     p,div{
         color : aliceblue;
     }
+    html::-webkit-scrollbar {
+        display: none; /* Chrome, Safari 対応 */
+    }
+    html{
+        -ms-overflow-style: none; /* IE, Edge 対応 */
+        scrollbar-width: none; /* Firefox 対応 */
+    }
 }
