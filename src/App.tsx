@@ -23,14 +23,38 @@ function Dekirukoto(){
                 <h2 className="font-bold text-2xl">できること</h2>
             </div>
             <div className="flex flex-col p-4">
+
                 <p>サーバーの運用</p>
-                <p>簡単なアプリ開発</p>
-                <p>簡単なWebサイトの作成</p>
                 <p>サーバー、インフラの保守</p>
+                <br/>
+
                 <p>Cloudflare</p>
                 <p>Azure</p>
-                <p>Aws</p>
+                <p>Amazon Web Service</p>
                 <p>Contabo</p>
+                <p>Google Cloud Platform</p>
+                <br/>
+
+                <p>簡単なアプリ開発</p>
+                <p>簡単なWebサイトの作成</p>
+                <br/>
+
+                <h2 className="text-xl">Frontend</h2>
+                <p>Svelte</p>
+                <p>Vue.js</p>
+                <p>React</p>
+                <p>Astro</p>
+                <br/>
+
+                <h2 className="text-xl">Backend</h2>
+                <p>Node.js</p>
+                <p>Javascript</p>
+                <p>PHP</p>
+
+                <br/>
+                <h2 className="text-xl">etc..</h2>
+                <p>Google Apps Script</p>
+                <br/>
                 <p>など...</p>
             </div>
         </div>
@@ -61,14 +85,14 @@ function Yattekita(){
         originalNotesCount: 0,
         originalUsersCount: 0
     })
-    const [MicolorStats,setMicolorStats] = useState<StatsType>({
+    const [PrisMisskeyStatus,setPrisMisskeyStatus] = useState<StatsType>({
         originalNotesCount: 0,
         originalUsersCount: 0
     })
     useEffect(()=>{
         const stat = async ()=>{
             setMattyaskiStats(await fetchStats('mattyaski.co'))
-            setMicolorStats(await fetchStats('micolor.link'))
+            setPrisMisskeyStatus(await fetchStats('prismisskey.space'))
         }
         stat()
     },[])
@@ -95,10 +119,10 @@ function Yattekita(){
 
                 <div className="divider my-2"></div>
 
-                <h2 className="text-2xl font-bold">micolor.link の保守</h2>
+                <h2 className="text-2xl font-bold">PrisMisskey.space の保守</h2>
                 <p> 『Misskey発の文化発信』 をテーマとしたMisskeyサーバーの保守</p>
-                <p>ユーザー数 {MicolorStats.originalUsersCount}人</p>
-                <p>総投稿数 {MicolorStats.originalNotesCount}投稿</p>
+                <p>ユーザー数 {PrisMisskeyStatus.originalUsersCount}人</p>
+                <p>総投稿数 {PrisMisskeyStatus.originalNotesCount}投稿</p>
 
                 <div className="divider my-2"></div>
                 <p className="text-2xl font-bold">他には</p>
