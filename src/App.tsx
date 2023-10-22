@@ -44,6 +44,7 @@ function Dekirukoto(){
                 <p>Vue.js</p>
                 <p>React</p>
                 <p>Astro</p>
+                <p>Nuxt.js</p>
                 <br/>
 
                 <h2 className="text-xl">Backend</h2>
@@ -72,7 +73,7 @@ function PC(){
                 <p>Memory : 4GB</p>
                 <p>Storage : SSD 128GB (SATA To USB3.0)</p>
                 <div className="divider my-2"></div>
-                <p className="text-xl">CHUWI LarkBox X 2023 × 2</p>
+                <p className="text-xl">CHUWI LarkBox X 2023 × 3</p>
                 <p>CPU : Intel N100</p>
                 <p>Memory : 12GB</p>
                 <p>Storage : SSD 512GB</p>
