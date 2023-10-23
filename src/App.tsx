@@ -104,6 +104,8 @@ function Yattekita(){
             </div>
             <div className="flex-col p-4">
                 <h2 className="text-2xl font-bold">Misskeyへのコントリビュート</h2>
+            </div>
+            <div className="flex-col p-4">
                 <h2 className="text-2xl font-bold">gaku-tab-love.com の運用(閉鎖)</h2>
                 <p>特定の層へ向けたMisskeyサーバーの運用</p>
                 <p>ユーザー 650人</p>
