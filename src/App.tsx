@@ -100,10 +100,10 @@ function Yattekita(){
     return (
         <div className="shadow-xl max-w-4xl container mx-auto rounded-lg mt-4 bg-gray-900 flex flex-col">
             <div className="px-4 pt-4">
-                <h2 className="font-bold text-2xl">やってきた・やったこと</h2>
-            </div>
-            <div className="flex-col p-4">
                 <h2 className="text-2xl font-bold">Misskeyへのコントリビュート</h2>
+            </div>
+            <div className="px-4 pt-4">
+                <h2 className="font-bold text-2xl">やってきた・やったこと</h2>
             </div>
             <div className="flex-col p-4">
                 <h2 className="text-2xl font-bold">gaku-tab-love.com の運用(閉鎖)</h2>
