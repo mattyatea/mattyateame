@@ -23,7 +23,7 @@ function Dekirukoto(){
                 <h2 className="font-bold text-2xl">できること</h2>
             </div>
             <div className="flex flex-col p-4">
-
+                
                 <p>サーバーの運用</p>
                 <p>サーバー、インフラの保守</p>
                 <br/>
@@ -103,6 +103,7 @@ function Yattekita(){
                 <h2 className="font-bold text-2xl">やってきた・やったこと</h2>
             </div>
             <div className="flex-col p-4">
+                <h2 className="text-2xl font-bold">Misskeyへのコントリビュート</h2>
                 <h2 className="text-2xl font-bold">gaku-tab-love.com の運用(閉鎖)</h2>
                 <p>特定の層へ向けたMisskeyサーバーの運用</p>
                 <p>ユーザー 650人</p>
@@ -147,8 +148,8 @@ function MyProfile(){
                 <h2 className="text-2xl py-5 pl-3">まっちゃてぃー。</h2>
             </div>
             <div className="flex flex-col p-3">
-
                 <p className="text-xl">生年月日：2008/07/03</p>
+                <p className="text-xl">Misskey-dev メンバー</p>
                 <div className="flex gap-4 mt-2">
                     <a href="https://github.com/mattyatea"><MdiGithub className="h-8 w-8" /></a>
                     <a href="https://mattyaski.co"><SimpleIconsMisskey className="h-8 w-8" /></a>
