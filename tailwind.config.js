@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./index.html",
+    "./src/**/*.svelte",
   ],
   theme: {
     extend: {},
   },
-
-  plugins: [require("daisyui")],
+  plugins: [],
 }
 
