@@ -1,7 +1,7 @@
-<script>
-    export let title;
-    export let date;
-    export let description = "";
+<script lang="ts">
+    export let title: string;
+    export let date: string;
+    export let description: string = "";
 </script>
 
 <li class="mb-10 ms-6">
