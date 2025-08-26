@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && wrangler pages deploy ./dist"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
@@ -19,6 +20,7 @@
   },
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.12"
+    "@tailwindcss/vite": "^4.1.12",
+    "wrangler": "^4.33.0"
   }
 }
