@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "pnpm run build && wrangler pages deploy ./dist"
+    "deploy": "pnpm run build && wrangler deploy"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.7",

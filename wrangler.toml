@@ -1,6 +1,8 @@
 name = "mattyateame"
 compatibility_date = "2025-01-26"
-pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
 
 [observability]
 enabled = true
