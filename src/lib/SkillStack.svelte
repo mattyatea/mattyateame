@@ -1,40 +1,46 @@
 <script lang="ts">
   import type { Stack } from '../types';
-  import { getStarRating } from '../utils/rating';
 
   export let stacks: Stack[];
+
+  const levelLabels: Record<number, string> = {
+    5: 'Expert',
+    4: 'Advanced',
+    3: 'Intermediate',
+    2: 'Basic',
+    1: 'Learning',
+  };
+
+  // グループ化
+  const grouped = [5, 4, 3, 2, 1].map(level => ({
+    level,
+    label: levelLabels[level],
+    items: stacks.filter(s => s.star === level),
+  })).filter(g => g.items.length > 0);
 </script>
 
-<div class="flex flex-col w-full bg-gray-300 dark:bg-slate-500 p-8 rounded-2xl">
-  <h1 class="text-3xl">技術スタック</h1>
-  
-  <div class="my-2">
-    <h1 class="text-base dark:text-gray-200 mb-3 sm:text-xl">
-      <span class="text-yellow-500">{getStarRating(5)}</span> 
-      <br>他者にも教えることができます ✅
-    </h1>
-    <h1 class="text-base dark:text-gray-200 mb-3 sm:text-xl">
-      <span class="text-yellow-500">{getStarRating(4)}</span> 
-      <br>大規模プロジェクトで活躍できます ✅
-    </h1>
-    <h1 class="text-base dark:text-gray-200 mb-3 sm:text-xl">
-      <span class="text-yellow-500">{getStarRating(3)}</span> 
-      <br>小〜中規模のプロジェクトでなら活躍できます ✅
-    </h1>
-    <h1 class="text-base dark:text-gray-200 mb-3 sm:text-xl">
-      <span class="text-yellow-500">{getStarRating(2)}</span> 
-      <br>基本的なことは理解している ✅
-    </h1>
-    <h1 class="text-base dark:text-gray-200 mb-3 sm:text-xl">
-      <span class="text-yellow-500">{getStarRating(1)}</span> 
-      <br>チュートリアル ✅
-    </h1>
-  </div>
-  
-  {#each stacks as stack}
-    <div class="flex justify-between items-center text-base dark:text-gray-200">
-      <span>{stack.name}</span>
-      <span class="text-yellow-500">{getStarRating(stack.star)}</span>
+<section>
+  <p class="section-label mb-4">Skills</p>
+  <div class="card p-8 space-y-6">
+    <h2 class="text-2xl font-bold">技術スタック</h2>
+
+    <div class="space-y-5">
+      {#each grouped as group}
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs font-semibold tracking-wide text-slate-500 uppercase">{group.label}</span>
+            <div class="flex-1 h-px" style="background: rgba(255,255,255,0.06);"></div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {#each group.items as stack}
+              <span class="skill-tag" data-level={group.level}>
+                {stack.name}
+              </span>
+            {/each}
+          </div>
+        </div>
+      {/each}
     </div>
-  {/each}
-</div>
+
+  </div>
+</section>

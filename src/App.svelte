@@ -1,19 +1,21 @@
 <script lang="ts">
-import ProfileCard from "./lib/ProfileCard.svelte";
+import Layout from "./lib/Layout.svelte";
+import Hero from "./lib/Hero.svelte";
+import About from "./lib/About.svelte";
 import SkillStack from "./lib/SkillStack.svelte";
+import Projects from "./lib/Projects.svelte";
 import Timeline from "./lib/Timeline.svelte";
 import Footer from "./lib/Footer.svelte";
-import Layout from "./lib/Layout.svelte";
-import { profile, stacks, timelineEntries } from "./data/profile";
+import { profile, stacks, timelineEntries, projects } from "./data/profile";
 </script>
 
 <Layout>
-  <main>
-    <div class="flex flex-col lg:w-9/12 w-full mx-auto space-y-4">
-      <ProfileCard {profile} />
-      <SkillStack {stacks} />
-      <Timeline entries={timelineEntries} />
-      <Footer copyrightText="Copyright © 2025 mattyatea All rights reserved." />
-    </div>
-  </main>
+  <Hero {profile} />
+  <div class="max-w-4xl mx-auto px-6 pb-24 space-y-20">
+    <About {profile} />
+    <Projects {projects} />
+    <SkillStack {stacks} />
+    <Timeline entries={timelineEntries} />
+  </div>
+  <Footer />
 </Layout>

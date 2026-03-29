@@ -1,18 +1,46 @@
 <script lang="ts">
-    export let title: string;
-    export let date: string;
-    export let description: string = "";
+  export let title: string;
+  export let date: string;
+  export let description: string = "";
+  export let type: 'work' | 'oss' | 'edu' | 'personal' = 'personal';
+
+  const isActive = date.includes('現在');
+
+  const typeColors: Record<string, string> = {
+    work: '#06b6d4',
+    oss: '#f43f5e',
+    edu: '#84cc16',
+    personal: '#a855f7',
+  };
+
+  const color = typeColors[type];
 </script>
 
-<li class="mb-10 ms-6">
-  <span class="absolute flex items-center justify-center w-6 h-6 bg-gray-300 rounded-full -start-3 ring-8 ring-gray-200 ">
-    <svg class="w-2.5 h-2.5 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-    </svg>
-  </span>
-    <h3 class="flex items-center mb-1 text-lg dark:text-gray-200">
-        {title}
-    </h3>
-    <time class="block mb-2 text-sm font-normal leading-none text-gray-700 dark:text-gray-300">{date}</time>
-    {@html description}
+<li class="relative pl-8 pb-8 last:pb-0">
+  <!-- Dot -->
+  <div
+    class="absolute left-0 top-[7px] w-2.5 h-2.5 rounded-full -translate-x-[5px]"
+    style="background: {color}; box-shadow: 0 0 8px {color}80;"
+  ></div>
+
+  <div>
+    <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-0.5">
+      <h3 class="font-semibold text-slate-100 text-[15px] leading-snug">{title}</h3>
+      {#if isActive}
+        <span
+          class="inline-flex items-center gap-1 text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full"
+          style="background: rgba(52,211,153,0.12); color: #34d399; border: 1px solid rgba(52,211,153,0.25);"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse block"></span>
+          NOW
+        </span>
+      {/if}
+    </div>
+    <time class="block text-xs text-slate-500 font-mono mb-2">{date}</time>
+    {#if description}
+      <div class="text-sm text-slate-400 leading-relaxed">
+        {@html description}
+      </div>
+    {/if}
+  </div>
 </li>
