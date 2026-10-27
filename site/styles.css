@@ -192,6 +192,9 @@ h1 {
 }
 
 .buttons a {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
 	padding: 6px 16px;
 	border: 1px solid var(--line);
 	border-radius: 8px;
@@ -211,6 +214,29 @@ h1 {
 	border-color: var(--fg);
 	background: var(--fg);
 	color: var(--bg);
+}
+
+.accounts {
+	display: grid;
+	gap: 4px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.accounts li {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 12px;
+	align-items: baseline;
+}
+
+.accounts span {
+	color: var(--sub);
+	font-size: 13px;
+}
+
+.accounts a {
+	font-family: var(--mono);
 }
 
 .profile {
