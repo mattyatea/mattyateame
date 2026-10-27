@@ -646,9 +646,9 @@ svg {
 	color: var(--fg);
 }
 
-.story > li:first-child .story-age b {
+.story-age.is-grade b {
 	font-family: var(--font-sans);
-	font-size: 26px;
+	font-size: 30px;
 	letter-spacing: 0;
 }
 
@@ -675,7 +675,7 @@ svg {
 	}
 }
 
-.story h3 + p {
+.story h3 ~ p {
 	max-width: 40rem;
 	margin-top: 10px;
 	font-size: 15px;
@@ -721,7 +721,7 @@ svg {
 	line-height: 1.55;
 }
 
-.traits h3 + p {
+.traits h3 ~ p {
 	margin-top: 12px;
 	font-size: 14.5px;
 	line-height: 2;
