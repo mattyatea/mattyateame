@@ -645,13 +645,6 @@ svg {
 	letter-spacing: -0.03em;
 	color: var(--fg);
 }
-
-.story-age.is-grade b {
-	font-family: var(--font-sans);
-	font-size: 30px;
-	letter-spacing: 0;
-}
-
 .now-tag {
 	margin-left: 8px;
 	padding: 1px 8px;
