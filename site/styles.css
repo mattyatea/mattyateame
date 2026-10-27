@@ -218,25 +218,51 @@ h1 {
 
 .accounts {
 	display: grid;
-	gap: 4px;
+	gap: 8px;
+	max-width: 26rem;
 	margin-top: 20px;
-	font-size: 14px;
-}
-
-.accounts li {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0 12px;
-	align-items: baseline;
-}
-
-.accounts span {
-	color: var(--sub);
-	font-size: 13px;
 }
 
 .accounts a {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 14px;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	background: var(--surface);
+	color: var(--fg);
+	text-decoration: none;
+}
+
+.accounts a:hover {
+	border-color: var(--accent);
+}
+
+.accounts img {
+	flex: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.accounts span {
+	display: grid;
+	min-width: 0;
+	overflow: hidden;
 	font-family: var(--mono);
+	font-size: 14px;
+	line-height: 1.6;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.accounts small {
+	color: var(--sub);
+	font-family:
+		"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+	font-size: 12px;
 }
 
 .profile {
@@ -603,14 +629,85 @@ h3 a:hover {
 
 /* これまで */
 
+life-age:not(:defined),
 life-event:not(:defined) {
 	display: block;
-	padding-block: 12px;
+	padding-block: 8px;
+}
+
+life-age:not(:defined)::before {
+	content: attr(age) "歳";
+	font-weight: 700;
 }
 
 life-event:not(:defined) time {
 	color: var(--sub);
 	font-size: 14px;
+}
+
+/* 撮った写真 */
+
+.photos {
+	display: grid;
+	gap: 16px;
+	align-items: center;
+}
+
+@media (min-width: 880px) {
+	.photos {
+		grid-template-columns: 18rem 1fr;
+		gap: 48px;
+	}
+}
+
+photo-stack {
+	max-width: 40rem;
+}
+
+photo-stack:not(:defined) img {
+	margin-bottom: 8px;
+	border-radius: 10px;
+}
+
+/* 写真の拡大 */
+
+.viewer {
+	max-width: 96vw;
+	max-height: 96vh;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #f0eee6;
+	cursor: zoom-out;
+}
+
+.viewer::backdrop {
+	background: rgb(0 0 0 / 0.86);
+}
+
+.viewer img {
+	max-width: 96vw;
+	max-height: 86vh;
+	border-radius: 8px;
+}
+
+.viewer p {
+	margin-top: 8px;
+	font-family: var(--mono);
+	font-size: 12px;
+	text-align: right;
+}
+
+.viewer-close {
+	position: fixed;
+	top: 12px;
+	right: 16px;
+	border: 0;
+	background: none;
+	color: #f0eee6;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
 }
 
 /* 書いたもの */

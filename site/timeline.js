@@ -1,5 +1,6 @@
 // 年表のコンポーネント
-// <life-timeline> の中に <life-event> を並べる。
+// <life-timeline birth="2008-07-03"> の中に、年齢ごとの <life-age age="13"> を置き、
+// その中に出来事の <life-event> を並べる。年齢が親、年月が子の形で表示する。
 // 日付は <time slot="when">、本文はそのまま中に書く。JavaScript が動かなくても中身は読める
 
 function sheet(css) {
@@ -8,68 +9,68 @@ function sheet(css) {
 	return s;
 }
 
-const eventSheet = sheet(`
+function pad(n) {
+	return String(n).padStart(2, "0");
+}
+
+const ageSheet = sheet(`
 :host {
+	display: block;
+	padding-bottom: 24px;
+}
+
+header {
 	display: grid;
-	grid-template-columns: auto 1fr;
-	align-items: baseline;
-	padding-block: 14px;
-	border-top: 1px dashed var(--line);
+	grid-template-columns: 12px auto 1fr;
+	align-items: center;
+	gap: 14px;
 }
 
-:host(:first-of-type) {
-	border-top: 0;
-}
-
-.age,
-.when {
-	margin: 0;
-	font-family: var(--mono);
-	font-size: 13px;
-	font-variant-numeric: tabular-nums;
+.mark {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .age {
-	color: var(--accent);
-	font-weight: 700;
+	margin: 0;
+	font-family: var(--mono);
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1.4;
 }
 
-.age:not(:empty) {
-	margin-right: 1em;
-}
-
-.when {
+.range {
+	margin: 0;
 	color: var(--sub);
+	font-family: var(--mono);
+	font-size: 12px;
 }
 
-.body {
-	grid-column: 1 / -1;
-	margin-top: 2px;
-}
-
-@media (min-width: 640px) {
-	:host {
-		grid-template-columns: 4.5em 8.5em 1fr;
-	}
-
-	.body {
-		grid-column: auto;
-		margin-top: 0;
-	}
+/* 子の出来事を、左の縦線でつなぐ */
+.children {
+	margin: 6px 0 0 5px;
+	padding-left: 19px;
+	border-left: 2px solid var(--line);
 }
 `);
 
-class LifeEvent extends HTMLElement {
+class LifeAge extends HTMLElement {
 	static observedAttributes = ["age"];
 
 	constructor() {
 		super();
 		const root = this.attachShadow({ mode: "open" });
-		root.adoptedStyleSheets = [eventSheet];
+		root.adoptedStyleSheets = [ageSheet];
 		root.innerHTML = `
-			<p class="age"></p>
-			<p class="when"><slot name="when"></slot></p>
-			<div class="body"><slot></slot></div>
+			<header>
+				<span class="mark"></span>
+				<p class="age"></p>
+				<p class="range"></p>
+			</header>
+			<div class="children" role="list"><slot></slot></div>
 		`;
 	}
 
@@ -83,8 +84,59 @@ class LifeEvent extends HTMLElement {
 	}
 
 	render() {
-		const age = this.getAttribute("age");
-		this.shadowRoot.querySelector(".age").textContent = age ? `${age}歳` : "";
+		const root = this.shadowRoot;
+		const age = Number(this.getAttribute("age"));
+		root.querySelector(".age").textContent = `${age}歳`;
+
+		// 誕生日から、その年齢だった期間を出す
+		const birth = this.closest("life-timeline")?.getAttribute("birth");
+		if (!birth) return;
+		const [y, m] = birth.split("-").map(Number);
+		root.querySelector(".range").textContent =
+			`${y + age}.${pad(m)} 〜 ${y + age + 1}.${pad(m)}`;
+	}
+}
+
+const eventSheet = sheet(`
+:host {
+	display: block;
+	position: relative;
+	padding-block: 10px;
+}
+
+/* 縦線から出来事へ伸びる枝 */
+.branch {
+	position: absolute;
+	top: 22px;
+	left: -19px;
+	width: 13px;
+	height: 2px;
+	background: var(--line);
+}
+
+.when {
+	margin: 0;
+	color: var(--sub);
+	font-family: var(--mono);
+	font-size: 13px;
+	font-variant-numeric: tabular-nums;
+}
+`);
+
+class LifeEvent extends HTMLElement {
+	constructor() {
+		super();
+		const root = this.attachShadow({ mode: "open" });
+		root.adoptedStyleSheets = [eventSheet];
+		root.innerHTML = `
+			<span class="branch"></span>
+			<p class="when"><slot name="when"></slot></p>
+			<slot></slot>
+		`;
+	}
+
+	connectedCallback() {
+		if (!this.hasAttribute("role")) this.setAttribute("role", "listitem");
 	}
 }
 
@@ -94,5 +146,6 @@ class LifeTimeline extends HTMLElement {
 	}
 }
 
-customElements.define("life-event", LifeEvent);
 customElements.define("life-timeline", LifeTimeline);
+customElements.define("life-age", LifeAge);
+customElements.define("life-event", LifeEvent);

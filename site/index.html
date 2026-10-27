@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/main.js" defer></script>
     <script src="/timeline.js" type="module"></script>
+    <script src="/photos.js" type="module"></script>
   </head>
   <body>
     <header class="bar">
@@ -50,21 +51,31 @@
             <a href="https://nanasi-apps.xyz">ブログ</a>
           </p>
           <ul class="accounts">
-            <li><span>AP（まっちゃすきー。）</span><a href="https://mattyaski.co/@mattyatea">@mattyatea@mattyaski.co</a></li>
-            <li><span>AP（PrisMisskey）</span><a href="https://prismisskey.space/@mattyatea">@mattyatea@prismisskey.space</a></li>
+            <li>
+              <a href="https://mattyaski.co/@mattyatea">
+                <img src="https://files.mattyaski.co/null/5d0ecddf-7898-4a32-a1c2-f74547600f15.png" alt="" width="40" height="40" />
+                <span><small>ActivityPub（まっちゃすきー。）</small>@mattyatea@mattyaski.co</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://prismisskey.space/@mattyatea">
+                <img src="https://files.prismisskey.space/misskey/8249062c-bc06-4138-a824-9c50abfb357a.webp" alt="" width="40" height="40" />
+                <span><small>ActivityPub（PrisMisskey）</small>@mattyatea@prismisskey.space</span>
+              </a>
+            </li>
           </ul>
         </div>
         <dl class="profile">
           <div><dt>年齢</dt><dd><span data-age>18</span>歳</dd></div>
           <div><dt>仕事</dt><dd>エンジニア</dd></div>
           <div><dt>学校</dt><dd>S高等学校</dd></div>
-          <div><dt>OSS</dt><dd>misskey-dev / MisskeyIO</dd></div>
+          <div><dt>OSS</dt><dd>misskey-dev / Misskey.io</dd></div>
           <div><dt>よく書く</dt><dd>TypeScript</dd></div>
         </dl>
       </section>
 
       <figure class="photo wrap">
-        <img src="/photos/coast.jpg" alt="曇り空の下の海岸と緑の丘の写真" width="1800" height="810" />
+        <photo-zoom><img src="/photos/coast.jpg" alt="曇り空の下の海岸と緑の丘の写真" width="1800" height="810" /></photo-zoom>
         <figcaption>撮影 2026.07</figcaption>
       </figure>
 
@@ -203,7 +214,7 @@
       </section>
 
       <figure class="photo wrap">
-        <img src="/photos/sunflower.jpg" alt="オレンジ色のヒマワリの写真" width="1800" height="810" loading="lazy" />
+        <photo-zoom><img src="/photos/sunflower.jpg" alt="オレンジ色のヒマワリの写真" width="1800" height="810" loading="lazy" /></photo-zoom>
         <figcaption>撮影 2026.08</figcaption>
       </figure>
 
@@ -220,123 +231,137 @@
 
       <section class="wrap section" aria-labelledby="history">
         <h2 id="history">これまで</h2>
-        <life-timeline class="measure">
-          <life-event age="9">
-            <time slot="when" datetime="2018">2018年ごろ</time>
-            <p>3DS の SmileBASIC ではじめてプログラムを書きました。</p>
-          </life-event>
-          <life-event age="10">
-            <time slot="when" datetime="2019">2019年ごろ</time>
-            <p>10歳から12歳までは PHP で Web アプリを書いていました。</p>
-          </life-event>
-          <life-event age="13">
-            <time slot="when" datetime="2021-11">2021年11月</time>
-            <p>
-              部屋に Raspberry Pi 4B（4GB）を1台置いて自宅サーバーを始めました。<br />
-              コードもずっとこの Raspberry Pi の上で VS Code を使って書いていました。<br />
-              WordPress を公開したり部屋の照明をサーバーから操作したりもしていました。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2021-11">2021年11月</time>
-            <p>技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を始めました。</p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2022-04">2022年4月</time>
-            <p>
-              はじめて Misskey のサーバーを立てました。<br />
-              このサーバーはすぐに閉じました。
-            </p>
-          </life-event>
-          <life-event age="14">
-            <time slot="when" datetime="2022-12">2022年12月</time>
-            <p>
-              自分の Misskey サーバー「まっちゃすきー。」（<a href="https://mattyaski.co">mattyaski.co</a>）を立ち上げました。<br />
-              データベースの破損やファイルサーバーの消失も経験しています。<br />
-              運営の大変さと面白さはだいたいここで知りました。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2023-04">2023年春ごろ</time>
-            <p>
-              まっちゃすきー。の同時接続が60人を超えました。<br />
-              2023年3月には1日に91人が使っていました。<br />
-              これまでに延べ約4,000人が登録しています。
-            </p>
-          </life-event>
-          <life-event age="15">
-            <time slot="when" datetime="2023">2023年ごろ</time>
-            <p>
-              人から支援してもらったパソコンで TypeScript と Vue を始めました。<br />
-              ここからちゃんとコードを書くようになりました。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2023">2023年ごろ</time>
-            <p>Cloudflare Workers を触り始めて、今もずっと触っています。</p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2023-09">2023年9月</time>
-            <p>
-              そのパソコンで Misskey のフォーク <a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a> を作り、<a href="https://prismisskey.space">PrisMisskey</a> で運営を始めました。<br />
-              ゲーミングモードのような少し変わった機能も入れています。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2023-10">2023年10月</time>
-            <p>
-              Misskey 本家に PR が2件マージされました。<br />
-              サーバーサイレンス機能の追加と、リモートユーザーを更新できるようにする変更です。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2023">2023年ごろ</time>
-            <p>Azure の VM の上に Kubernetes のクラスターを組んでみました。</p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2024-04">2024年4月</time>
-            <p>
-              S高等学校に入学しました。<br />
-              2027年3月に卒業する予定です。
-            </p>
-          </life-event>
-          <life-event age="16">
-            <time slot="when" datetime="2024-07">2024年7月〜2025年8月</time>
-            <p>
-              Fediverse のホスティング事業で業務委託として働き始めました。<br />
-              好きなことが仕事になりました。<br />
-              Azure と Kubernetes でのインフラの構築と運用、決済まわりの開発を担当していました。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2024-07">2024年7月</time>
-            <p>
-              Misskey.io の開発に参加しました。<br />
-              ロールでリアクションを制御する機能や Elasticsearch での検索などを実装し、48件の PR がマージされています。<br />
-              約72万人規模の Misskey 環境の構築と保守にも関わりました。<br />
-              上流の更新を取り込むときに出た約300件の競合を1か月ほどかけて解いたこともあります。
-            </p>
-          </life-event>
-          <life-event>
-            <time slot="when" datetime="2025-01">2025年1月〜</time>
-            <p>
-              IT 企業でエンジニアとして働き始めました。<br />
-              Java や Kotlin、Laravel、React で業務システムや AI を使った SaaS、社内ツールを作ってきました。<br />
-              AWS の S3 と CloudFront での公開も担当しています。
-            </p>
-          </life-event>
-          <life-event age="17">
-            <time slot="when" datetime="2025-12">2025年12月</time>
-            <p>
-              PWA でインストールした Misskey が特定の条件で真っ白な画面のまま止まる問題を Issue #16951 で報告しました。<br />
-              Service Worker を直す PR が2件本家にマージされています。
-            </p>
-          </life-event>
+        <life-timeline class="measure" birth="2008-07-03">
+          <life-age age="9">
+            <life-event>
+              <time slot="when" datetime="2018">2018年ごろ</time>
+              <p>3DS の SmileBASIC ではじめてプログラムを書きました。</p>
+            </life-event>
+          </life-age>
+          <life-age age="10">
+            <life-event>
+              <time slot="when" datetime="2019">2019年ごろ</time>
+              <p>10歳から12歳までは PHP で Web アプリを書いていました。</p>
+            </life-event>
+          </life-age>
+          <life-age age="13">
+            <life-event>
+              <time slot="when" datetime="2021-11">2021年11月</time>
+              <p>
+                部屋に Raspberry Pi 4B（4GB）を1台置いて自宅サーバーを始めました。<br />
+                コードもずっとこの Raspberry Pi の上で VS Code を使って書いていました。<br />
+                WordPress を公開したり部屋の照明をサーバーから操作したりもしていました。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2021-11">2021年11月</time>
+              <p>技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を始めました。</p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2022-04">2022年4月</time>
+              <p>
+                はじめて Misskey のサーバーを立てました。<br />
+                このサーバーはすぐに閉じました。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="14">
+            <life-event>
+              <time slot="when" datetime="2022-12">2022年12月</time>
+              <p>
+                自分の Misskey サーバー「まっちゃすきー。」（<a href="https://mattyaski.co">mattyaski.co</a>）を立ち上げました。<br />
+                データベースの破損やファイルサーバーの消失も経験しています。<br />
+                運営の大変さと面白さはだいたいここで知りました。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-04">2023年春ごろ</time>
+              <p>
+                まっちゃすきー。の同時接続が60人を超えました。<br />
+                2023年3月には1日に91人が使っていました。<br />
+                これまでに延べ約4,000人が登録しています。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="15">
+            <life-event>
+              <time slot="when" datetime="2023">2023年ごろ</time>
+              <p>
+                人から支援してもらったパソコンで TypeScript と Vue を始めました。<br />
+                ここからちゃんとコードを書くようになりました。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023">2023年ごろ</time>
+              <p>Cloudflare Workers を触り始めて、今もずっと触っています。</p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-09">2023年9月</time>
+              <p>
+                そのパソコンで Misskey のフォーク <a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a> を作り、<a href="https://prismisskey.space">PrisMisskey</a> で運営を始めました。<br />
+                ゲーミングモードのような少し変わった機能も入れています。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-10">2023年10月</time>
+              <p>
+                Misskey 本家に PR が2件マージされました。<br />
+                サーバーサイレンス機能の追加と、リモートユーザーを更新できるようにする変更です。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023">2023年ごろ</time>
+              <p>Azure の VM の上に Kubernetes のクラスターを組んでみました。</p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2024-04">2024年4月</time>
+              <p>
+                S高等学校に入学しました。<br />
+                2027年3月に卒業する予定です。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="16">
+            <life-event>
+              <time slot="when" datetime="2024-07">2024年7月〜2025年8月</time>
+              <p>
+                Fediverse のホスティング事業で業務委託として働き始めました。<br />
+                好きなことが仕事になりました。<br />
+                Azure と Kubernetes でのインフラの構築と運用、決済まわりの開発を担当していました。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2024-07">2024年7月</time>
+              <p>
+                Misskey.io の開発に参加しました。<br />
+                ロールでリアクションを制御する機能や Elasticsearch での検索などを実装し、48件の PR がマージされています。<br />
+                約72万人規模の Misskey 環境の構築と保守にも関わりました。<br />
+                上流の更新を取り込むときに出た約300件の競合を1か月ほどかけて解いたこともあります。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2025-01">2025年1月〜</time>
+              <p>
+                IT 企業でエンジニアとして働き始めました。<br />
+                Java や Kotlin、Laravel、React で業務システムや AI を使った SaaS、社内ツールを作ってきました。<br />
+                AWS の S3 と CloudFront での公開も担当しています。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="17">
+            <life-event>
+              <time slot="when" datetime="2025-12">2025年12月</time>
+              <p>
+                PWA でインストールした Misskey が特定の条件で真っ白な画面のまま止まる問題を Issue #16951 で報告しました。<br />
+                Service Worker を直す PR が2件本家にマージされています。
+              </p>
+            </life-event>
+          </life-age>
         </life-timeline>
       </section>
 
       <figure class="photo wrap">
-        <img src="/photos/red-brick.jpg" alt="横浜赤レンガ倉庫と手前の植え込みの写真" width="1800" height="810" loading="lazy" />
+        <photo-zoom><img src="/photos/red-brick.jpg" alt="横浜赤レンガ倉庫と手前の植え込みの写真" width="1800" height="810" loading="lazy" /></photo-zoom>
         <figcaption>撮影 2026.08 横浜</figcaption>
       </figure>
 
@@ -358,6 +383,24 @@
           <li><time datetime="2023-03-22">2023.03</time><a href="https://nanasi-apps.xyz/posts/Misskey-oldremotenote">Misskey v12以降に生まれた悲しい怪物(誰からも反応のないリモート投稿)を削除するSQL</a></li>
           <li><time datetime="2023-03-19">2023.03</time><a href="https://nanasi-apps.xyz/posts/r2-misskey">MisskeyでCloudflare R2 Storageを使う</a></li>
         </ul>
+      </section>
+
+      <section class="wrap section" aria-labelledby="photos">
+        <h2 id="photos">撮った写真</h2>
+        <div class="photos">
+          <p>
+            風景や花の写真を撮っています。<br />
+            写真を押すと次の1枚に変わります。<br />
+            拡大のボタンで大きく見られます。
+          </p>
+          <photo-stack>
+            <img src="/photos/sunflower.jpg" alt="オレンジ色のヒマワリの写真" data-caption="撮影 2026.08" width="1800" height="810" loading="lazy" />
+            <img src="/photos/coast.jpg" alt="曇り空の下の海岸と緑の丘の写真" data-caption="撮影 2026.07" width="1800" height="810" loading="lazy" />
+            <img src="/photos/sunset.jpg" alt="夕焼けの空と観覧車の写真" data-caption="まっちゃすきー。のバナーにも使っている写真" width="1000" height="450" loading="lazy" />
+            <img src="/photos/red-brick.jpg" alt="横浜赤レンガ倉庫と手前の植え込みの写真" data-caption="撮影 2026.08 横浜" width="1800" height="810" loading="lazy" />
+            <img src="/photos/petunia.jpg" alt="紫と白のペチュニアの写真" data-caption="撮影 2026.08" width="1800" height="810" loading="lazy" />
+          </photo-stack>
+        </div>
       </section>
 
       <section class="wrap section" aria-labelledby="me">
@@ -386,7 +429,7 @@
       </section>
 
       <figure class="photo wrap">
-        <img src="/photos/petunia.jpg" alt="紫と白のペチュニアの写真" width="1800" height="810" loading="lazy" />
+        <photo-zoom><img src="/photos/petunia.jpg" alt="紫と白のペチュニアの写真" width="1800" height="810" loading="lazy" /></photo-zoom>
         <figcaption>撮影 2026.08</figcaption>
       </figure>
 
