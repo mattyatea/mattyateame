@@ -4,6 +4,14 @@
 	--sub: #66695f;
 	--line: #dedcd2;
 	--link: #4d7a2a;
+
+	/* 年表の種類ごとの色 */
+	--k-code: #3f6fb5;
+	--k-server: #b07419;
+	--k-write: #7a7f73;
+	--k-oss: #4d7a2a;
+	--k-work: #b5523b;
+	--k-school: #8059b0;
 	color-scheme: light dark;
 }
 
@@ -14,6 +22,13 @@
 		--sub: #9c9f93;
 		--line: #34362f;
 		--link: #a8c97f;
+
+		--k-code: #86a9e6;
+		--k-server: #e0b062;
+		--k-write: #9c9f93;
+		--k-oss: #a8c97f;
+		--k-work: #e48a72;
+		--k-school: #b796e2;
 	}
 }
 
@@ -121,57 +136,40 @@ h2 {
 
 /* これまで */
 
-.history {
-	padding: 0;
-	list-style: none;
+.tl-switch {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 16px;
 }
 
-.history li {
-	display: grid;
-	gap: 2px;
+.tl-switch button {
+	padding: 0 12px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: none;
+	color: var(--sub);
+	font: inherit;
+	font-size: 13px;
+	line-height: 1.9;
+	cursor: pointer;
+}
+
+.tl-switch button[aria-pressed="true"] {
+	border-color: var(--fg);
+	background: var(--fg);
+	color: var(--bg);
+}
+
+/* JavaScript が動かないときも、日付と本文は読めるようにする */
+life-event:not(:defined) {
+	display: block;
 	padding-block: 12px;
+	color: var(--fg);
 }
 
-.history li + li {
-	border-top: 1px dashed var(--line);
-}
-
-.history .when + p {
-	margin-top: 0;
-}
-
-.when {
+life-event:not(:defined) time {
 	color: var(--sub);
 	font-size: 14px;
-	font-variant-numeric: tabular-nums;
-}
-
-.when b {
-	margin-right: 0.8em;
-	color: var(--fg);
-	font-weight: 700;
-}
-
-@media (min-width: 600px) {
-	.history li {
-		grid-template-columns: 10rem 1fr;
-		gap: 16px;
-	}
-
-	.when {
-		padding-top: 1px;
-	}
-
-	.when b {
-		display: inline-block;
-		min-width: 3em;
-		margin-right: 0.4em;
-	}
-
-	/* 年齢のない行も、日付の位置をそろえる */
-	.when:not(:has(b)) {
-		padding-left: calc(3em + 0.4em);
-	}
 }
 
 /* 書いたもの */

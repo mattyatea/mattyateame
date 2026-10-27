@@ -7,7 +7,8 @@
 
 - `site/index.html`: ページの内容。プロフィールや経歴の文章はここを直接編集します。
 - `site/styles.css`: 見た目。色やフォントは先頭の `:root` にまとめています。
-- `site/main.js`: 年齢などの自動計算、スクロール時の表示、ナビの強調。
+- `site/main.js`: 年齢と年の自動計算と、年表の見せ方の切り替え。
+- `site/timeline.js`: 年表の Web Components（`<life-timeline>` と `<life-event>`）。`variant="list"` は読み物の形、`variant="rail"` は図の形です。
 
 ## 開発
 

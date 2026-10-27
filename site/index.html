@@ -19,6 +19,7 @@
     <meta name="twitter:card" content="summary" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/main.js" defer></script>
+    <script src="/timeline.js" type="module"></script>
   </head>
   <body>
     <main>
@@ -55,122 +56,134 @@
 
       <section aria-labelledby="history">
         <h2 id="history">これまで</h2>
-        <ol class="history">
-          <li>
-            <p class="when"><b>9歳</b>2018年ごろ</p>
-            <p>3DS の SmileBASIC で、はじめてプログラムを書きました。</p>
-          </li>
-          <li>
-            <p class="when"><b>10歳</b>2019年ごろ</p>
-            <p>10歳から12歳にかけて、PHP で Web アプリを書いていました。</p>
-          </li>
-          <li>
-            <p class="when"><b>13歳</b>2021年11月</p>
+        <div class="tl-switch" role="group" aria-label="年表の見せ方">
+          <button type="button" data-variant="list" aria-pressed="true">読み物</button>
+          <button type="button" data-variant="rail" aria-pressed="false">図</button>
+        </div>
+        <life-timeline variant="list" birth="2008-07-03">
+          <life-event age="9" kind="code" milestone>
+            <time slot="when" datetime="2018">2018年ごろ</time>
+            <p>
+              3DS の SmileBASIC で、はじめてプログラムを書きました。
+            </p>
+          </life-event>
+          <life-event age="10" kind="code">
+            <time slot="when" datetime="2019">2019年ごろ</time>
+            <p>
+              10歳から12歳にかけて、PHP で Web アプリを書いていました。
+            </p>
+          </life-event>
+          <life-event age="13" kind="server">
+            <time slot="when" datetime="2021-11">2021年11月</time>
             <p>
               部屋に Raspberry Pi 4B（4GB）を1台置いて、自宅サーバーを始めました。<br />
               コードを書くのも、ずっとこの Raspberry Pi の上で、VS Code を使っていました。<br />
               WordPress を公開したり、部屋の照明をサーバーから操作したりもしていました。
             </p>
-          </li>
-          <li>
-            <p class="when">2021年11月</p>
-            <p>技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を始めました。</p>
-          </li>
-          <li>
-            <p class="when">2022年4月</p>
+          </life-event>
+          <life-event kind="write">
+            <time slot="when" datetime="2021-11">2021年11月</time>
+            <p>
+              技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を始めました。
+            </p>
+          </life-event>
+          <life-event kind="server">
+            <time slot="when" datetime="2022-04">2022年4月</time>
             <p>
               はじめて Misskey のサーバーを立てました。<br />
               このサーバーは、すぐに閉じました。
             </p>
-          </li>
-          <li>
-            <p class="when"><b>14歳</b>2022年12月</p>
+          </life-event>
+          <life-event age="14" kind="server" milestone>
+            <time slot="when" datetime="2022-12">2022年12月</time>
             <p>
               自分の Misskey サーバー「まっちゃすきー。」（<a href="https://mattyaski.co">mattyaski.co</a>）を立ち上げました。<br />
               データベースの破損や、ファイルサーバーの消失も経験しています。<br />
               運営の大変さと面白さは、だいたいここで知りました。
             </p>
-          </li>
-          <li>
-            <p class="when">2023年春ごろ</p>
+          </life-event>
+          <life-event kind="server">
+            <time slot="when" datetime="2023-04">2023年春ごろ</time>
             <p>
               まっちゃすきー。の同時接続が、60人を超えました。<br />
               2023年3月には、1日に91人が使っていました。<br />
               これまでに、延べ約4,000人が登録しています。
             </p>
-          </li>
-          <li>
-            <p class="when"><b>15歳</b>2023年ごろ</p>
+          </life-event>
+          <life-event age="15" kind="code" milestone>
+            <time slot="when" datetime="2023">2023年ごろ</time>
             <p>
               人から支援してもらったパソコンで、TypeScript と Vue を始めました。<br />
               ちゃんとコードを書くようになったのは、ここからです。
             </p>
-          </li>
-          <li>
-            <p class="when">2023年ごろ</p>
+          </life-event>
+          <life-event kind="code">
+            <time slot="when" datetime="2023">2023年ごろ</time>
             <p>
               Cloudflare Workers を触り始めました。<br />
               この頃から今まで、Cloudflare Workers まわりはずっと触り続けています。
             </p>
-          </li>
-          <li>
-            <p class="when">2023年9月</p>
+          </life-event>
+          <life-event kind="oss">
+            <time slot="when" datetime="2023-09">2023年9月</time>
             <p>
               そのパソコンで Misskey のフォーク <a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a> を作り、<a href="https://prismisskey.space">PrisMisskey.space</a> として運営を始めました。<br />
               ゲーミングモードのような、ちょっと変わった機能も入れています。
             </p>
-          </li>
-          <li>
-            <p class="when">2023年10月</p>
+          </life-event>
+          <life-event kind="oss" milestone>
+            <time slot="when" datetime="2023-10">2023年10月</time>
             <p>
               Misskey 本家の開発に参加しました。<br />
               サーバーサイレンス機能を追加する PR と、リモートユーザーの情報を更新できるようにする PR がマージされました。
             </p>
-          </li>
-          <li>
-            <p class="when">2023年ごろ</p>
-            <p>Azure の VM の上に、Kubernetes のクラスターを組んでみました。</p>
-          </li>
-          <li>
-            <p class="when">2024年4月</p>
+          </life-event>
+          <life-event kind="server">
+            <time slot="when" datetime="2023">2023年ごろ</time>
+            <p>
+              Azure の VM の上に、Kubernetes のクラスターを組んでみました。
+            </p>
+          </life-event>
+          <life-event kind="school">
+            <time slot="when" datetime="2024-04">2024年4月</time>
             <p>
               S高等学校に入学しました。<br />
               2027年3月に卒業する予定です。
             </p>
-          </li>
-          <li>
-            <p class="when"><b>16歳</b>2024年7月〜2025年8月</p>
+          </life-event>
+          <life-event age="16" kind="work" milestone>
+            <time slot="when" datetime="2024-07">2024年7月〜2025年8月</time>
             <p>
               Fediverse のホスティング事業で、業務委託として働き始めました。<br />
               好きなことが、仕事になりました。<br />
               Azure と Kubernetes を使ったインフラの構築と運用、決済まわりの開発を担当していました。
             </p>
-          </li>
-          <li>
-            <p class="when">2024年7月</p>
+          </life-event>
+          <life-event kind="oss">
+            <time slot="when" datetime="2024-07">2024年7月</time>
             <p>
               Misskey.io の開発に参加しました。<br />
               ロールでリアクションを制御する機能や、Elasticsearch での検索などを実装して、これまでに48件の PR がマージされています。<br />
               約72万人規模の Misskey 環境の構築と保守にも関わりました。<br />
               上流の更新を取り込むときに出た約300件の競合を、1か月ほどかけて解いたこともあります。
             </p>
-          </li>
-          <li>
-            <p class="when">2025年1月〜</p>
+          </life-event>
+          <life-event kind="work" milestone>
+            <time slot="when" datetime="2025-01">2025年1月〜</time>
             <p>
               IT 企業でエンジニアとして働き始めました。<br />
               Java や Kotlin、PHP の Laravel、React を使い、AWS の S3 と CloudFront での公開も担当しました。<br />
               業務システムや、AI を使った SaaS、社内ツールを担当してきました。
             </p>
-          </li>
-          <li>
-            <p class="when"><b>17歳</b>2025年12月</p>
+          </life-event>
+          <life-event age="17" kind="oss">
+            <time slot="when" datetime="2025-12">2025年12月</time>
             <p>
               PWA でインストールした Misskey が、特定の条件で空白のページのまま止まってしまう問題を、Issue #16951 で報告しました。<br />
               Service Worker を直す2つの PR が、本家にマージされています。
             </p>
-          </li>
-        </ol>
+          </life-event>
+        </life-timeline>
       </section>
 
       <section aria-labelledby="me">
