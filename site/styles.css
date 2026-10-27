@@ -290,39 +290,6 @@ h1 {
 	font-size: 13px;
 }
 
-/* 写真の帯 */
-
-.photo {
-	padding-top: 88px;
-}
-
-.photo img {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 2 / 1;
-	border-radius: 12px;
-	object-fit: cover;
-}
-
-@media (min-width: 720px) {
-	.photo img {
-		aspect-ratio: 3 / 1;
-	}
-}
-
-.photo figcaption {
-	margin-top: 6px;
-	color: var(--sub);
-	font-family: var(--mono);
-	font-size: 12px;
-	text-align: right;
-}
-
-/* 写真のすぐあとのセクションは、間を詰める */
-.photo + .section {
-	padding-top: 56px;
-}
-
 /* セクション */
 
 .section {
@@ -667,47 +634,6 @@ photo-stack {
 photo-stack:not(:defined) img {
 	margin-bottom: 8px;
 	border-radius: 10px;
-}
-
-/* 写真の拡大 */
-
-.viewer {
-	max-width: 96vw;
-	max-height: 96vh;
-	padding: 0;
-	border: 0;
-	background: transparent;
-	color: #f0eee6;
-	cursor: zoom-out;
-}
-
-.viewer::backdrop {
-	background: rgb(0 0 0 / 0.86);
-}
-
-.viewer img {
-	max-width: 96vw;
-	max-height: 86vh;
-	border-radius: 8px;
-}
-
-.viewer p {
-	margin-top: 8px;
-	font-family: var(--mono);
-	font-size: 12px;
-	text-align: right;
-}
-
-.viewer-close {
-	position: fixed;
-	top: 12px;
-	right: 16px;
-	border: 0;
-	background: none;
-	color: #f0eee6;
-	font-size: 28px;
-	line-height: 1;
-	cursor: pointer;
 }
 
 /* 書いたもの */

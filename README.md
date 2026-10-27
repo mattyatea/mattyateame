@@ -9,8 +9,8 @@
 - `site/styles.css`: 見た目。色やフォントは先頭の `:root` にまとめています。
 - `site/main.js`: 年齢と年の自動計算と、運営しているサーバーの数字の読み込み（NodeInfo）。
 - `site/timeline.js`: 年表の Web Components（`<life-timeline>`、年齢の `<life-age>`、出来事の `<life-event>`）。
-- `site/photos.js`: 写真の Web Components（押すと拡大する `<photo-zoom>` と、重ねてめくる `<photo-stack>`）。
-- `site/photos/`: 区切りに使っている写真（自分で撮影）。
+- `site/photos.js`: 写真の Web Components（スワイプでめくる `<photo-stack>` と、拡大して見る `<photo-viewer>`）。
+- `site/photos/`: 撮った写真のセクションで使う写真（自分で撮影）。
 
 ## 開発
 
