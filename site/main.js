@@ -1,4 +1,4 @@
-// 年齢・実務年数・年号を今日の日付から出す
+// 年齢と年号を今日の日付から出す
 const today = new Date();
 
 function yearsSince(year, month, day = 1) {
@@ -11,24 +11,8 @@ function yearsSince(year, month, day = 1) {
 for (const el of document.querySelectorAll("[data-age]")) {
 	el.textContent = String(yearsSince(2008, 7, 3));
 }
-for (const el of document.querySelectorAll("[data-work-years]")) {
-	el.textContent = String(yearsSince(2025, 1));
-}
 for (const el of document.querySelectorAll("[data-year]")) {
 	el.textContent = String(today.getFullYear());
-}
-
-// 技術スタックの一覧から、流れるテキストを作る（途切れないよう2周分）
-const ticker = document.querySelector("[data-ticker]");
-const skills = [...document.querySelectorAll("[data-skills] .chip")].map(
-	(chip) => chip.textContent,
-);
-if (ticker) {
-	for (const name of [...skills, ...skills]) {
-		const span = document.createElement("span");
-		span.textContent = name;
-		ticker.append(span);
-	}
 }
 
 // スクロールしたらナビに背景を付ける
