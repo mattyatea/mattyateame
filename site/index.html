@@ -3,346 +3,263 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>まっちゃてぃー。 — mattyatea.me</title>
-    <meta name="description" content="まっちゃてぃー。(@mattyatea) の自己紹介。9歳で 3DS の SmileBASIC を始め、13歳で部屋にサーバーを置き、14歳で自分の SNS を立ち上げた、18歳のエンジニアです。" />
-    <meta name="theme-color" content="#0e110d" />
+    <title>まっちゃてぃー。</title>
+    <meta name="description" content="まっちゃてぃー。(@mattyatea) の自己紹介です。Misskey の開発とサーバーの運営をしながら、高校に通い、IT 企業でエンジニアとして働いています。" />
+    <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161714" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://mattyatea.me/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta property="og:title" content="まっちゃてぃー。 — 14歳で、自分の SNS を立ち上げました。" />
-    <meta property="og:description" content="9歳で 3DS の SmileBASIC を始め、13歳で部屋にサーバーを置き、14歳で自分の SNS を立ち上げた、18歳のエンジニアの自己紹介です。" />
+    <meta property="og:title" content="まっちゃてぃー。" />
+    <meta property="og:description" content="Misskey の開発とサーバーの運営をしながら、高校に通い、IT 企業でエンジニアとして働いています。" />
     <meta property="og:url" content="https://mattyatea.me" />
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="mattyatea.me" />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:image" content="https://mattyaski.co/avatar/@mattyatea" />
     <meta name="twitter:card" content="summary" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/main.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">本文へ移動</a>
+    <main>
+      <header class="intro">
+        <img class="avatar" src="https://mattyaski.co/avatar/@mattyatea" alt="まっちゃてぃー。のアイコン アニメ調の女の子の画像" width="72" height="72" />
+        <h1>まっちゃてぃー。</h1>
+        <p class="handle">@mattyatea ・ <span data-age>18</span>歳</p>
+      </header>
 
-    <header class="site-header page">
-      <a class="logo" href="#top">mattyatea<span>.me</span></a>
-      <nav aria-label="メイン">
-        <a href="#now">いま</a>
-        <a href="#story">これまで</a>
-        <a href="#me">人となり</a>
-        <a href="#writing">記事</a>
-        <a href="#hello">連絡</a>
-      </nav>
-    </header>
+      <p>
+        まっちゃてぃー。です。<br />
+        Misskey の開発と、Misskey サーバーの運営をしています。<br />
+        高校に通いながら、IT 企業でエンジニアとしても働いています。
+      </p>
+      <p>
+        9歳のときに 3DS の SmileBASIC でプログラムを書き始めて、14歳で自分の Misskey サーバー「まっちゃすきー。」を立ち上げました。
+      </p>
 
-    <main id="main">
-      <!-- Hero -->
-      <section class="hero page" id="top">
-        <div class="hero-id">
-          <img class="avatar" src="https://mattyaski.co/avatar/@mattyatea" alt="まっちゃてぃー。のアイコン アニメ調の女の子の画像" width="96" height="96" />
-          <p>まっちゃてぃー。<span>@mattyatea</span></p>
-        </div>
-        <h1>14歳で、<br /><mark>自分の SNS</mark> を<br />立ち上げました。</h1>
-        <p class="hero-lead">
-          はじめまして、まっちゃてぃー。です。<br />
-          9歳のときに 3DS の SmileBASIC でプログラミングを始めて、部屋に置いた1台の Raspberry Pi をきっかけに、Fediverse の SNS を運営するようになりました。<br />
-          いまは高校に通いながら、Misskey の開発とサーバーの運営、それから Web の仕事をしています。
-        </p>
-        <p class="hero-meta"><span><span data-age>18</span>歳</span><span>高校生</span><span>Misskey 開発者</span><span>SNS 運営者</span></p>
-        <p class="hero-links">
-          <a href="https://mattyaski.co/@mattyatea" target="_blank" rel="noopener noreferrer">mattyaski.co</a>
-          <a href="https://github.com/mattyatea" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://nanasi-apps.xyz" target="_blank" rel="noopener noreferrer">Blog</a>
-        </p>
+      <section aria-labelledby="now">
+        <h2 id="now">いま</h2>
+        <ul class="list">
+          <li>
+            IT 企業で、画面からクラウドまでまとめて作っています。<br />
+            FTP で手作業していた Web サイトの公開を、GitHub Actions と S3、CloudFront での自動デプロイに移して、公開にかかる時間をおよそ3分の1にしました。
+          </li>
+          <li>Misskey 本家と Misskey.io の開発に関わっています。</li>
+          <li>
+            自分のサーバーを2つ運営しています。<br />
+            nanasphere では、十数台のサーバーの運営を手伝っています。
+          </li>
+          <li><a href="https://nanasi-apps.xyz">ブログ</a>に、Misskey の構築や運用、Kubernetes、AI まわりのことを書いています。</li>
+        </ul>
       </section>
 
-      <!-- Numbers -->
-      <section class="page" aria-label="数字で見る">
-        <dl class="numbers">
-          <div>
-            <dd>約72万人</dd>
-            <dt>規模の Misskey 環境の構築・保守に関わった</dt>
-          </div>
-          <div>
-            <dd>約4,000人</dd>
-            <dt>自分で立ち上げた SNS の延べ登録</dt>
-          </div>
-          <div>
-            <dd>2 + 10台以上</dd>
-            <dt>自分で運営しているサーバーと、運営を手伝っているサーバー</dt>
-          </div>
-          <div>
-            <dd>約300件</dd>
-            <dt>上流の更新を取り込むときに、1か月かけて解いた競合</dt>
-          </div>
-        </dl>
-      </section>
-
-      <!-- Now -->
-      <section class="page section" id="now" aria-labelledby="now-title">
-        <h2 id="now-title">いまやっていること</h2>
-        <div class="now">
-          <div>
-            <h3>仕事で</h3>
-            <ul>
-              <li>
-                <b>フルスタックの開発</b>
-                <p>2025年から、IT 企業で画面からクラウドまでまとめて作っています。<br />業務システムや、AI を使った SaaS、社内ツールを担当してきました。</p>
-              </li>
-              <li>
-                <b>Web サイトの公開作業の自動化</b>
-                <p>FTP で手作業していた公開を、GitHub Actions と S3、CloudFront を使った自動デプロイに移しました。<br />公開にかかる時間は、以前のおよそ3分の1になりました。</p>
-              </li>
-              <li>
-                <b>AI を使った営業支援ツール</b>
-                <p>要件の整理から、画面、API、Cloudflare の上のクラウド構成まで担当しました。</p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>個人で</h3>
-            <ul>
-              <li>
-                <b>Misskey の開発</b>
-                <p>Misskey 本家と Misskey.io の開発に関わっています。</p>
-              </li>
-              <li>
-                <b>サーバーの運営</b>
-                <p>自分のサーバーを2つ運営しています。<br />nanasphere では、十数台のサーバーの運営を手伝っています。</p>
-              </li>
-              <li>
-                <b>ブログ</b>
-                <p>Misskey の構築や運用、Kubernetes、AI まわりのことを書いています。</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Story -->
-      <section class="page section" id="story" aria-labelledby="story-title">
-        <h2 id="story-title">これまでのこと</h2>
-
-        <ol class="timeline">
+      <section aria-labelledby="history">
+        <h2 id="history">これまで</h2>
+        <ol class="history">
           <li>
-            <p class="tl-age"><b>9</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2018年ごろ</p>
-                <h3>3DS の SmileBASIC でプログラミングを始めた</h3>
-                <p>はじめて書いたのは、3DS の SmileBASIC でした。</p>
-              </li>
-            </ol>
+            <p class="when"><b>9歳</b>2018年ごろ</p>
+            <p>3DS の SmileBASIC で、はじめてプログラムを書きました。</p>
           </li>
           <li>
-            <p class="tl-age"><b>10</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2019年ごろから</p>
-                <h3>PHP で Web に触れた</h3>
-                <p>10歳から12歳にかけて、PHP で Web アプリを書いていました。</p>
-              </li>
-            </ol>
+            <p class="when"><b>10歳</b>2019年ごろ</p>
+            <p>10歳から12歳にかけて、PHP で Web アプリを書いていました。</p>
           </li>
           <li>
-            <p class="tl-age"><b>13</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2021年11月</p>
-                <h3>部屋に Raspberry Pi を置いた</h3>
-                <p>Raspberry Pi 4B（4GB）1台で自宅サーバーを始めて、インフラを実際に触るようになりました。<br />コードを書くのも、ずっとこの Raspberry Pi の上で、VS Code を使っていました。<br />WordPress を公開したり、部屋の照明をサーバーから操作したりもしていました。</p>
-              </li>
-              <li>
-                <p class="tl-date">2021年11月</p>
-                <h3>技術ブログを始めた</h3>
-                <p>nanasi-apps.xyz を開設しました。</p>
-              </li>
-              <li>
-                <p class="tl-date">2022年4月</p>
-                <h3>はじめて Misskey を立てた</h3>
-                <p>はじめて Misskey のサーバーを立てました。<br />このサーバーは、すぐに閉じました。</p>
-              </li>
-            </ol>
+            <p class="when"><b>13歳</b>2021年11月</p>
+            <p>
+              部屋に Raspberry Pi 4B（4GB）を1台置いて、自宅サーバーを始めました。<br />
+              コードを書くのも、ずっとこの Raspberry Pi の上で、VS Code を使っていました。<br />
+              WordPress を公開したり、部屋の照明をサーバーから操作したりもしていました。
+            </p>
           </li>
           <li>
-            <p class="tl-age"><b>14</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2022年12月</p>
-                <h3>自分の SNS「まっちゃすきー。」を開設した</h3>
-                <p>Misskey サーバー mattyaski.co を立ち上げました。<br />データベースの破損や、ファイルサーバーの消失も経験しています。<br />運営の大変さと面白さは、だいたいここで知りました。</p>
-              </li>
-              <li>
-                <p class="tl-date">2023年春ごろ</p>
-                <h3>同時接続が60人を超えた</h3>
-                <p>まっちゃすきー。の同時接続が、60人を超えました。<br />2023年3月には、1日に91人が使っていました。</p>
-              </li>
-            </ol>
+            <p class="when">2021年11月</p>
+            <p>技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を始めました。</p>
           </li>
           <li>
-            <p class="tl-age"><b>15</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2023年ごろ</p>
-                <h3>人から支援してもらったパソコンで TypeScript を始めた</h3>
-                <p>支援してもらったパソコンで、TypeScript と Vue を始めました。<br />ちゃんとコードを書くようになったのは、ここからです。</p>
-              </li>
-              <li>
-                <p class="tl-date">2023年ごろから</p>
-                <h3>Cloudflare Workers を触り始めた</h3>
-                <p>この頃から今まで、Cloudflare Workers まわりはずっと触り続けています。</p>
-              </li>
-              <li>
-                <p class="tl-date">2023年9月</p>
-                <h3>Misskey のフォーク「Type4ny」を作った</h3>
-                <p>そのパソコンで Type4ny を作り、PrisMisskey.space として運営を始めました。<br />ゲーミングモードのような、ちょっと変わった機能も入れています。</p>
-              </li>
-              <li>
-                <p class="tl-date">2023年10月</p>
-                <h3>Misskey 本家の開発に参加した</h3>
-                <p>サーバーサイレンス機能を追加する PR がマージされました。<br />同じ月に、リモートユーザーの情報を更新できるようにする PR もマージされています。</p>
-              </li>
-              <li>
-                <p class="tl-date">2023年ごろ</p>
-                <h3>Azure の VM に Kubernetes を組んだ</h3>
-                <p>Azure の VM の上に、Kubernetes のクラスターを組んでみました。</p>
-              </li>
-              <li>
-                <p class="tl-date">2024年4月</p>
-                <h3>S高等学校に入学した</h3>
-                <p>2027年3月に卒業する予定です。</p>
-              </li>
-            </ol>
+            <p class="when">2022年4月</p>
+            <p>
+              はじめて Misskey のサーバーを立てました。<br />
+              このサーバーは、すぐに閉じました。
+            </p>
           </li>
           <li>
-            <p class="tl-age"><b>16</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2024年7月 〜 2025年8月</p>
-                <h3>好きなことが仕事になった</h3>
-                <p>Fediverse のホスティング事業で、業務委託として働き始めました。<br />Azure と Kubernetes を使ったインフラの構築・運用と、決済まわりの開発を担当していました。</p>
-              </li>
-              <li>
-                <p class="tl-date">2024年7月</p>
-                <h3>Misskey.io の開発に参加した</h3>
-                <p>ロールでリアクションを制御する機能や、Elasticsearch での検索などを実装しました。<br />これまでに48件の PR がマージされています。</p>
-              </li>
-              <li>
-                <p class="tl-date">2025年1月 〜</p>
-                <h3>IT 企業でエンジニアになった</h3>
-                <p>画面からクラウドまでまとめて作る仕事をしています。<br />Java や Kotlin、PHP の Laravel、React を使い、AWS の S3 と CloudFront での公開も担当しました。</p>
-              </li>
-            </ol>
+            <p class="when"><b>14歳</b>2022年12月</p>
+            <p>
+              自分の Misskey サーバー「まっちゃすきー。」（<a href="https://mattyaski.co">mattyaski.co</a>）を立ち上げました。<br />
+              データベースの破損や、ファイルサーバーの消失も経験しています。<br />
+              運営の大変さと面白さは、だいたいここで知りました。
+            </p>
           </li>
           <li>
-            <p class="tl-age"><b>17</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">2025年12月</p>
-                <h3>PWA で画面が真っ白になる問題を直した</h3>
-                <p>PWA でインストールした Misskey が、特定の条件で空白のページのまま止まってしまう問題を Issue #16951 で報告しました。<br />Service Worker を直す2つの PR が、本家にマージされています。</p>
-              </li>
-            </ol>
+            <p class="when">2023年春ごろ</p>
+            <p>
+              まっちゃすきー。の同時接続が、60人を超えました。<br />
+              2023年3月には、1日に91人が使っていました。<br />
+              これまでに、延べ約4,000人が登録しています。
+            </p>
           </li>
-          <li class="is-now">
-            <p class="tl-age"><b data-age>18</b>歳</p>
-            <ol class="tl-events">
-              <li>
-                <p class="tl-date">いま</p>
-                <h3>高校に通いながら作って動かしている</h3>
-                <p>自分のサーバーを2つ運営して、nanasphere では十数台のサーバーの運営を手伝っています。<br />Misskey の開発も続けています。</p>
-              </li>
-            </ol>
+          <li>
+            <p class="when"><b>15歳</b>2023年ごろ</p>
+            <p>
+              人から支援してもらったパソコンで、TypeScript と Vue を始めました。<br />
+              ちゃんとコードを書くようになったのは、ここからです。
+            </p>
+          </li>
+          <li>
+            <p class="when">2023年ごろ</p>
+            <p>
+              Cloudflare Workers を触り始めました。<br />
+              この頃から今まで、Cloudflare Workers まわりはずっと触り続けています。
+            </p>
+          </li>
+          <li>
+            <p class="when">2023年9月</p>
+            <p>
+              そのパソコンで Misskey のフォーク <a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a> を作り、<a href="https://prismisskey.space">PrisMisskey.space</a> として運営を始めました。<br />
+              ゲーミングモードのような、ちょっと変わった機能も入れています。
+            </p>
+          </li>
+          <li>
+            <p class="when">2023年10月</p>
+            <p>
+              Misskey 本家の開発に参加しました。<br />
+              サーバーサイレンス機能を追加する PR と、リモートユーザーの情報を更新できるようにする PR がマージされました。
+            </p>
+          </li>
+          <li>
+            <p class="when">2023年ごろ</p>
+            <p>Azure の VM の上に、Kubernetes のクラスターを組んでみました。</p>
+          </li>
+          <li>
+            <p class="when">2024年4月</p>
+            <p>
+              S高等学校に入学しました。<br />
+              2027年3月に卒業する予定です。
+            </p>
+          </li>
+          <li>
+            <p class="when"><b>16歳</b>2024年7月〜2025年8月</p>
+            <p>
+              Fediverse のホスティング事業で、業務委託として働き始めました。<br />
+              好きなことが、仕事になりました。<br />
+              Azure と Kubernetes を使ったインフラの構築と運用、決済まわりの開発を担当していました。
+            </p>
+          </li>
+          <li>
+            <p class="when">2024年7月</p>
+            <p>
+              Misskey.io の開発に参加しました。<br />
+              ロールでリアクションを制御する機能や、Elasticsearch での検索などを実装して、これまでに48件の PR がマージされています。<br />
+              約72万人規模の Misskey 環境の構築と保守にも関わりました。<br />
+              上流の更新を取り込むときに出た約300件の競合を、1か月ほどかけて解いたこともあります。
+            </p>
+          </li>
+          <li>
+            <p class="when">2025年1月〜</p>
+            <p>
+              IT 企業でエンジニアとして働き始めました。<br />
+              Java や Kotlin、PHP の Laravel、React を使い、AWS の S3 と CloudFront での公開も担当しました。<br />
+              業務システムや、AI を使った SaaS、社内ツールを担当してきました。
+            </p>
+          </li>
+          <li>
+            <p class="when"><b>17歳</b>2025年12月</p>
+            <p>
+              PWA でインストールした Misskey が、特定の条件で空白のページのまま止まってしまう問題を、Issue #16951 で報告しました。<br />
+              Service Worker を直す2つの PR が、本家にマージされています。
+            </p>
           </li>
         </ol>
       </section>
 
-      <!-- About me -->
-      <section class="page section" id="me" aria-labelledby="me-title">
-        <h2 id="me-title">こんな人です</h2>
-        <div class="traits">
-          <article>
-            <h3>作るより動かし続けるのが好き</h3>
-            <p>公開したら終わりではなく、更新や障害対応、問い合わせ、バックアップまでが楽しいところだと思っています。<br />自分の SNS を何年も運営してきたので、「そのあと」を先に考えるクセがあります。</p>
-          </article>
-          <article>
-            <h3>失敗は仕組みで直す</h3>
-            <p>バックアップが取れていないことに気付かず、約1年分のデータを失ったことがあります。<br />それからは週1回のバックアップに加えて、2〜3週間ごとに「ちゃんと戻せるか」まで確かめています。</p>
-          </article>
-          <article>
-            <h3>気になったら根っこから</h3>
-            <p>表面だけを直すより、仕組みから作り直したくなるタイプです。<br />このサイトも一度ぜんぶ書き直しました。</p>
-            <p>新しい技術や AI もすぐに試します。<br />ただ、手順が決まっている処理まで AI に任せず、ふつうのコードで書くくらいの冷静さは持っているつもりです。</p>
-          </article>
-          <article>
-            <h3>苦手なこともあります</h3>
-            <p>大人数の調整や見積もりは、まだ修行中です。<br />Kubernetes のように、触ってはいても知見がまだ浅い分野もあります。</p>
-            <p>気になるところを全部拾いにいって抱え込みがちなので、優先順位を一緒に決めてもらえるとすごく助かります。</p>
-          </article>
-        </div>
+      <section aria-labelledby="me">
+        <h2 id="me">人となり</h2>
+        <p>
+          作ったものを、動かし続けるのが好きです。<br />
+          公開したら終わりではなく、更新や障害対応、問い合わせ、バックアップまでが楽しいところだと思っています。<br />
+          自分の SNS を何年も運営してきたので、「そのあと」を先に考えるクセがあります。
+        </p>
+        <p>
+          バックアップが取れていないことに気付かず、約1年分のデータを失ったことがあります。<br />
+          それからは週1回のバックアップに加えて、2〜3週間ごとに、ちゃんと戻せるかまで確かめています。
+        </p>
+        <p>
+          表面だけを直すより、仕組みから作り直したくなるタイプです。<br />
+          このサイトも一度ぜんぶ書き直しました。<br />
+          新しい技術や AI もすぐに試しますが、手順が決まっている処理まで AI に任せず、ふつうのコードで書くようにしています。
+        </p>
+        <p>
+          大人数の調整や見積もりは、まだ修行中です。<br />
+          Kubernetes のように、触ってはいても知見がまだ浅い分野もあります。<br />
+          気になるところを全部拾いにいって抱え込みがちなので、優先順位を一緒に決めてもらえるとすごく助かります。
+        </p>
       </section>
 
-      <!-- Writing -->
-      <section class="page section" id="writing" aria-labelledby="writing-title">
-        <h2 id="writing-title">書いた記事</h2>
-        <p class="section-lead">技術ブログ nanasi-apps.xyz に、Misskey の構築や運用の記事を中心に22本書いています。<br />その中から、いくつか選びました。</p>
-        <ul class="writing">
-          <li><time datetime="2025-04-13">2025.04</time><a href="https://nanasi-apps.xyz/posts/esa-mcp-server" target="_blank" rel="noopener noreferrer">esaの情報をいい感じに使ってくれるmcp serverを作った</a></li>
-          <li><time datetime="2025-04-10">2025.04</time><a href="https://nanasi-apps.xyz/posts/jetbrains-mcp" target="_blank" rel="noopener noreferrer">JetBrains系統のIDEをいい感じにClaude Desktopからいじりたい</a></li>
-          <li><time datetime="2025-03-09">2025.03</time><a href="https://nanasi-apps.xyz/posts/immich-k8s-deploy" target="_blank" rel="noopener noreferrer">Immich をk8sに構築する</a></li>
-          <li><time datetime="2025-03-09">2025.03</time><a href="https://nanasi-apps.xyz/posts/k0s-kubernetes-easy" target="_blank" rel="noopener noreferrer">K0s で Kubernetes クラスタを構築する。</a></li>
-          <li><time datetime="2024-10-08">2024.10</time><a href="https://nanasi-apps.xyz/posts/bun-k8s-client-okasii" target="_blank" rel="noopener noreferrer">Bun で @kubernetes/client-node を使用する際に UNABLE_TO_VERIFY_LEAF_SIGNATURE が発生する問題の解決法</a></li>
-          <li><time datetime="2024-01-23">2024.01</time><a href="https://nanasi-apps.xyz/posts/What-is-Misskey" target="_blank" rel="noopener noreferrer">分散型SNS、Misskeyって何？</a></li>
-          <li><time datetime="2023-08-17">2023.08</time><a href="https://nanasi-apps.xyz/posts/Misskey-jemalloc" target="_blank" rel="noopener noreferrer">Misskeyでjemallocを使う(Debian系統)</a></li>
-          <li><time datetime="2023-05-09">2023.05</time><a href="https://nanasi-apps.xyz/posts/misskey-meilisearch" target="_blank" rel="noopener noreferrer">MisskeyでMeilisearchを導入するやり方</a></li>
-          <li><time datetime="2023-03-22">2023.03</time><a href="https://nanasi-apps.xyz/posts/Misskey-oldremotenote" target="_blank" rel="noopener noreferrer">Misskey v12以降に生まれた悲しい怪物(誰からも反応のないリモート投稿)を削除するSQL</a></li>
-          <li><time datetime="2023-03-19">2023.03</time><a href="https://nanasi-apps.xyz/posts/r2-misskey" target="_blank" rel="noopener noreferrer">MisskeyでCloudflare R2 Storageを使う</a></li>
+      <section aria-labelledby="writing">
+        <h2 id="writing">書いたもの</h2>
+        <p>
+          <a href="https://nanasi-apps.xyz/posts">nanasi-apps.xyz</a> に、Misskey の構築や運用の記事を中心に22本書いています。<br />
+          その中から、いくつか選びました。
+        </p>
+        <ul class="posts">
+          <li><time datetime="2025-04-13">2025.04</time><a href="https://nanasi-apps.xyz/posts/esa-mcp-server">esaの情報をいい感じに使ってくれるmcp serverを作った</a></li>
+          <li><time datetime="2025-04-10">2025.04</time><a href="https://nanasi-apps.xyz/posts/jetbrains-mcp">JetBrains系統のIDEをいい感じにClaude Desktopからいじりたい</a></li>
+          <li><time datetime="2025-03-09">2025.03</time><a href="https://nanasi-apps.xyz/posts/immich-k8s-deploy">Immich をk8sに構築する</a></li>
+          <li><time datetime="2025-03-09">2025.03</time><a href="https://nanasi-apps.xyz/posts/k0s-kubernetes-easy">K0s で Kubernetes クラスタを構築する。</a></li>
+          <li><time datetime="2024-10-08">2024.10</time><a href="https://nanasi-apps.xyz/posts/bun-k8s-client-okasii">Bun で @kubernetes/client-node を使用する際に UNABLE_TO_VERIFY_LEAF_SIGNATURE が発生する問題の解決法</a></li>
+          <li><time datetime="2024-01-23">2024.01</time><a href="https://nanasi-apps.xyz/posts/What-is-Misskey">分散型SNS、Misskeyって何？</a></li>
+          <li><time datetime="2023-08-17">2023.08</time><a href="https://nanasi-apps.xyz/posts/Misskey-jemalloc">Misskeyでjemallocを使う(Debian系統)</a></li>
+          <li><time datetime="2023-05-09">2023.05</time><a href="https://nanasi-apps.xyz/posts/misskey-meilisearch">MisskeyでMeilisearchを導入するやり方</a></li>
+          <li><time datetime="2023-03-22">2023.03</time><a href="https://nanasi-apps.xyz/posts/Misskey-oldremotenote">Misskey v12以降に生まれた悲しい怪物(誰からも反応のないリモート投稿)を削除するSQL</a></li>
+          <li><time datetime="2023-03-19">2023.03</time><a href="https://nanasi-apps.xyz/posts/r2-misskey">MisskeyでCloudflare R2 Storageを使う</a></li>
         </ul>
-        <p class="more"><a href="https://nanasi-apps.xyz/posts" target="_blank" rel="noopener noreferrer">記事をすべて見る</a></p>
       </section>
 
-      <!-- Things -->
-      <section class="page section" id="things" aria-labelledby="things-title">
-        <h2 id="things-title">つくっているもの、動かしているもの</h2>
-        <ul class="things">
-          <li>
-            <p class="thing-name">nanasphere <span>運営中</span></p>
-            <p>Misskey を運営したい人のためのマネージドホスティングです。<br />Kubernetes と Cloudflare の上で、十数台のサーバーの運営を手伝っています。</p>
-          </li>
-          <li>
-            <p class="thing-name"><a href="https://prismisskey.space" target="_blank" rel="noopener noreferrer">PrisMisskey.space</a> <span>運営中</span></p>
-            <p>自作フォーク Type4ny で動かしている SNS です。<br />キャッチコピーは「Misskey の最先端がここにある」です。</p>
-          </li>
-          <li>
-            <p class="thing-name"><a href="https://mattyaski.co" target="_blank" rel="noopener noreferrer">mattyaski.co</a> <span>運営中</span></p>
-            <p>14歳で立ち上げた、最初の自分の SNS「まっちゃすきー。」です。</p>
-          </li>
-          <li>
-            <p class="thing-name"><a href="https://github.com/mattyatea/ActivityPub-Relay" target="_blank" rel="noopener noreferrer">ActivityPub-Relay</a> <span>公開中</span></p>
-            <p>Hono と Cloudflare Workers で作った、Fediverse のサーバー同士をつなぐリレーです。</p>
-          </li>
-          <li class="is-ended">
-            <p class="thing-name"><a href="https://github.com/Type4ny-Project/Type4ny" target="_blank" rel="noopener noreferrer">Type4ny</a> <span>アーカイブ</span></p>
-            <p>15歳で作った Misskey のフォークです。<br />ゲーミングモードなどの独自機能を入れていました。</p>
-          </li>
-        </ul>
+      <section aria-labelledby="things">
+        <h2 id="things">動かしているもの</h2>
+        <dl class="things">
+          <dt>nanasphere</dt>
+          <dd>
+            Misskey を運営したい人のためのマネージドホスティングです。<br />
+            Kubernetes と Cloudflare の上で、十数台のサーバーの運営を手伝っています。
+          </dd>
+          <dt><a href="https://prismisskey.space">PrisMisskey.space</a></dt>
+          <dd>
+            自作フォーク Type4ny で動かしている Misskey サーバーです。<br />
+            キャッチコピーは「Misskey の最先端がここにある」です。
+          </dd>
+          <dt><a href="https://mattyaski.co">mattyaski.co</a></dt>
+          <dd>14歳で立ち上げた、最初の自分の Misskey サーバー「まっちゃすきー。」です。</dd>
+          <dt><a href="https://github.com/mattyatea/ActivityPub-Relay">ActivityPub-Relay</a></dt>
+          <dd>Hono と Cloudflare Workers で作った、Fediverse のサーバー同士をつなぐリレーです。</dd>
+          <dt><a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a></dt>
+          <dd>
+            15歳で作った Misskey のフォークです。<br />
+            いまはアーカイブしています。
+          </dd>
+        </dl>
+        <p class="tools">
+          よく使うのは TypeScript、Node.js、Linux です。<br />
+          ほかに Vue / Nuxt、React / Next.js、Hono、Java / Spring Boot、Kotlin、PHP / Laravel、Cloudflare Workers、PostgreSQL、Redis、Nginx、Docker、Kubernetes、AWS、Terraform を使います。
+        </p>
+      </section>
 
-        <h3 class="tools-title">よく使う道具</h3>
-        <p class="tools"><strong>TypeScript</strong>、<strong>Node.js</strong>、<strong>Linux</strong>、Vue / Nuxt、React / Next.js、Hono、Java / Spring Boot、Kotlin、PHP / Laravel、Cloudflare Workers、PostgreSQL、Redis、Nginx、Docker、Kubernetes、AWS、Terraform</p>
+      <section aria-labelledby="contact">
+        <h2 id="contact">連絡先</h2>
+        <p>
+          技術の話も雑談も、お仕事の相談も歓迎です。<br />
+          Misskey と GitHub にいます。
+        </p>
+        <ul class="contact">
+          <li>Misskey <a href="https://mattyaski.co/@mattyatea">@mattyatea@mattyaski.co</a></li>
+          <li>Misskey <a href="https://prismisskey.space/@mattyatea">@mattyatea@prismisskey.space</a></li>
+          <li>GitHub <a href="https://github.com/mattyatea">mattyatea</a></li>
+          <li>Blog <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a></li>
+        </ul>
       </section>
     </main>
 
-    <footer class="footer page" id="hello">
-      <h2>気軽に<br />話しかけてください。</h2>
-      <p class="footer-lead">Fediverse や GitHub にいます。<br />技術の話も雑談も、お仕事の相談も歓迎です。</p>
-      <ul class="footer-links">
-        <li><a href="https://mattyaski.co/@mattyatea" target="_blank" rel="noopener noreferrer"><b>mattyaski.co</b><span>@mattyatea@mattyaski.co</span></a></li>
-        <li><a href="https://prismisskey.space/@mattyatea" target="_blank" rel="noopener noreferrer"><b>PrisMisskey</b><span>@mattyatea@prismisskey.space</span></a></li>
-        <li><a href="https://github.com/mattyatea" target="_blank" rel="noopener noreferrer"><b>GitHub</b><span>github.com/mattyatea</span></a></li>
-        <li><a href="https://nanasi-apps.xyz" target="_blank" rel="noopener noreferrer"><b>Blog</b><span>nanasi-apps.xyz</span></a></li>
-      </ul>
-      <p class="footer-bottom">© <span data-year>2026</span> mattyatea</p>
-    </footer>
+    <footer>© <span data-year>2026</span> mattyatea</footer>
   </body>
 </html>
