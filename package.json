@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --ip 0.0.0.0 --port 8787",
     "lint": "biome check site/main.js site/styles.css",
     "deploy": "wrangler deploy"
   },
