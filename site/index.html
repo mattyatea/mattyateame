@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>まっちゃてぃー。 — mattyatea.me</title>
+    <meta name="description" content="まっちゃてぃー。(@mattyatea) のポートフォリオ。Web・インフラ・Fediverse のエンジニアとして、Misskey の開発やサーバー運営をしています。" />
+    <meta name="theme-color" content="#090c09" />
+    <link rel="canonical" href="https://mattyatea.me/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="まっちゃてぃー。のポートフォリオ" />
+    <meta property="og:description" content="Web・インフラ・Fediverse のエンジニア。Misskey の開発やサーバー運営をしています。" />
+    <meta property="og:url" content="https://mattyatea.me" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="mattyatea.me" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://mattyaski.co/avatar/@mattyatea" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Kosugi+Maru&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script>document.documentElement.classList.add("js")</script>
+    <script src="/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="メイン">
+        <a class="nav-logo" href="#top">mattyatea<span>.me</span></a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+          </ul>
+          <a class="icon-button" href="https://github.com/mattyatea" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="15" height="15" aria-hidden="true"><use href="#i-github" /></svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero container" id="top">
+        <div class="hero-text">
+          <p class="eyebrow hero-in"><span class="status-dot" aria-hidden="true"></span>Web · Infra · Fediverse</p>
+          <h1 class="hero-name hero-in" style="--delay: 80ms">まっちゃてぃー。</h1>
+          <p class="hero-handle hero-in" style="--delay: 140ms">@mattyatea</p>
+          <p class="hero-lead hero-in" style="--delay: 200ms">
+            Web とインフラが好きなエンジニアです。<br class="sm-only" />
+            Misskey の開発に関わりながら、Fediverse のサーバーを運営しています。
+          </p>
+          <ul class="hero-meta hero-in" style="--delay: 260ms">
+            <li><span><span data-age>18</span>歳</span></li>
+            <li>Misskey-dev メンバー</li>
+            <li>S高等学校 在学中</li>
+          </ul>
+          <div class="hero-links hero-in" style="--delay: 340ms">
+            <a class="button button-primary" href="https://github.com/mattyatea" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-github" /></svg>GitHub
+            </a>
+            <a class="button" href="https://mattyaski.co/@mattyatea" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-globe" /></svg>mattyaski.co
+            </a>
+            <a class="button" href="https://prismisskey.space/@mattyatea" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-star" /></svg>PrisMisskey
+            </a>
+            <a class="button" href="https://nanasi-apps.xyz" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-book" /></svg>Blog
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-in" style="--delay: 120ms">
+          <div class="avatar">
+            <svg class="avatar-ring" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="ring-path" d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0" /></defs>
+              <text font-size="8.5" textLength="562" lengthAdjust="spacing"><textPath href="#ring-path">MATTYATEA · MISSKEY-DEV · FEDIVERSE · OSS · </textPath></text>
+            </svg>
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-frame">
+              <img src="https://mattyaski.co/avatar/@mattyatea" alt="まっちゃてぃー。のアイコン アニメ調の女の子の画像" width="240" height="240" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true"><div class="ticker-track" data-ticker></div></div>
+
+      <div class="container sections">
+        <!-- About -->
+        <section id="about" class="reveal" aria-labelledby="about-title">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">01 / About</p>
+              <h2 id="about-title">こんにちは！</h2>
+            </div>
+            <span class="section-index" aria-hidden="true">01</span>
+          </header>
+
+          <div class="about">
+            <div class="prose">
+              <p>小学生の頃にプログラミングを始め、Raspberry Pi 1台の自宅サーバーから、Fediverse の SNS 運営、OSS への貢献まで続けてきました。</p>
+              <p>Misskey には約3年関わっていて、独自フォーク「Type4ny」の開発や、本家への機能追加・不具合修正をしています。今は自分で2つのサーバーを運営しながら、nanasphere で十数台のサーバー運営を手伝っています。</p>
+              <p>2025年からはフロントエンド・バックエンド・クラウドをまたいだ開発を仕事にしています。得意なのは <strong>Node.js・TypeScript・Linux</strong> です。</p>
+              <ul class="chips">
+                <li class="chip">Misskey-dev メンバー</li>
+                <li class="chip">Misskey.io 開発者</li>
+                <li class="chip">S高等学校 在学中</li>
+                <li class="chip">Fediverse</li>
+              </ul>
+            </div>
+
+            <dl class="stats">
+              <div><dt>年齢</dt><dd><b data-age>18</b><span>歳</span></dd></div>
+              <div><dt>実務経験</dt><dd><b data-work-years>1</b><span>年+</span></dd></div>
+              <div><dt>Misskey 歴</dt><dd><b>3</b><span>年</span></dd></div>
+              <div><dt>自分で運営</dt><dd><b>2</b><span>サーバー</span></dd></div>
+              <div><dt>運営を手伝う</dt><dd><b>10</b><span>+ サーバー</span></dd></div>
+              <div><dt>SNS の延べ登録</dt><dd><b>4,000</b><span>人</span></dd></div>
+            </dl>
+          </div>
+
+          <div class="principles">
+            <article>
+              <p class="principle-no">i.</p>
+              <h3>公開したあとまで面倒を見る</h3>
+              <p>画面と API だけで終わらせず、デプロイ、監視、バックアップ、問い合わせ対応まで含めて作ります。</p>
+            </article>
+            <article>
+              <p class="principle-no">ii.</p>
+              <h3>AI は向いているところだけに</h3>
+              <p>決まった手順はふつうのコードで、意味の判断や要約が必要なところだけ AI に任せます。</p>
+            </article>
+            <article>
+              <p class="principle-no">iii.</p>
+              <h3>失敗は仕組みで直す</h3>
+              <p>バックアップ不足で約1年分のデータを失ったことがあります。今は週1回のバックアップに加え、2〜3週間ごとに復元まで確かめています。</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="reveal" aria-labelledby="work-title">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">02 / Work</p>
+              <h2 id="work-title">仕事でやってきたこと</h2>
+            </div>
+            <span class="section-index" aria-hidden="true">02</span>
+          </header>
+
+          <ol class="work-list">
+            <li>
+              <div class="work-figure"><b>1/3</b><span>公開にかかる時間</span></div>
+              <div>
+                <h3>Web サイトの公開作業を自動化</h3>
+                <p>FTP で手作業していた公開を、S3・CloudFront・GitHub Actions による自動デプロイへ移しました。認証も固定の鍵から OIDC に変えています。</p>
+                <p class="work-tags">AWS · GitHub Actions · OIDC</p>
+              </div>
+            </li>
+            <li>
+              <div class="work-figure"><b>AI</b><span>営業支援ツール</span></div>
+              <div>
+                <h3>営業準備をまとめて支援する社内ツール</h3>
+                <p>候補の一覧作成から情報確認、入力支援までを一つの流れにしました。要件整理、画面、API、クラウド構成まで担当しています。</p>
+                <p class="work-tags">Cloudflare Workers · Queues · D1 · Vue · oRPC</p>
+              </div>
+            </li>
+            <li>
+              <div class="work-figure"><b>SaaS</b><span>テナント管理</span></div>
+              <div>
+                <h3>AI SaaS とテナント・権限まわり</h3>
+                <p>組織ごとのデータ分離、管理者と一般ユーザーの権限、外部サービス連携の不具合調査などを担当しました。</p>
+                <p class="work-tags">Kotlin · Java · React · AWS · Terraform</p>
+              </div>
+            </li>
+            <li>
+              <div class="work-figure"><b>2→3</b><span>Vue の移行</span></div>
+              <div>
+                <h3>Vue 2 から Vue 3 への移行</h3>
+                <p>TypeScript の更新と合わせて、既存の業務画面を Vue 3 へ移しました。</p>
+                <p class="work-tags">Vue · TypeScript</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="reveal" aria-labelledby="projects-title">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">03 / Projects</p>
+              <h2 id="projects-title">個人のプロジェクト</h2>
+            </div>
+            <span class="section-index" aria-hidden="true">03</span>
+          </header>
+
+          <ul class="projects">
+            <li>
+              <div class="card">
+                <div class="card-top"><span class="card-no">01</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">nanasphere</h3>
+                <p class="card-host">Misskey ホスティング</p>
+                <p class="card-desc">Misskey を運営したい人向けのマネージドホスティング。Kubernetes と Cloudflare の上で、十数台のサーバーの構築・更新・運用を手伝っています。</p>
+                <p class="card-tags">#Kubernetes #Cloudflare #Misskey</p>
+              </div>
+            </li>
+            <li>
+              <a class="card" href="https://prismisskey.space" target="_blank" rel="noopener noreferrer">
+                <div class="card-top"><span class="card-no">02</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">PrisMisskey.space<span class="card-arrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-arrow" /></svg></span></h3>
+                <p class="card-host">prismisskey.space</p>
+                <p class="card-desc">自作フォーク Type4ny を基盤にした Fediverse SNS。「Misskey の最先端がここにある」をキャッチコピーに運営しています。</p>
+                <p class="card-tags">#Type4ny #Misskey #Fediverse</p>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="https://mattyaski.co" target="_blank" rel="noopener noreferrer">
+                <div class="card-top"><span class="card-no">03</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">mattyaski.co<span class="card-arrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-arrow" /></svg></span></h3>
+                <p class="card-host">mattyaski.co</p>
+                <p class="card-desc">自分で立ち上げた Misskey サーバー「まっちゃすきー。」。DB の破損やファイルサーバーの消失を乗り越え、PostgreSQL と Nginx の運用を身につけました。</p>
+                <p class="card-tags">#Misskey #PostgreSQL #Linux #Nginx</p>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="https://github.com/mattyatea/ActivityPub-Relay" target="_blank" rel="noopener noreferrer">
+                <div class="card-top"><span class="card-no">04</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">ActivityPub-Relay<span class="card-arrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-arrow" /></svg></span></h3>
+                <p class="card-host">github.com</p>
+                <p class="card-desc">Hono と Cloudflare Workers で作った ActivityPub リレー。HTTP 署名、WebFinger・NodeInfo、管理ダッシュボードに対応しています。</p>
+                <p class="card-tags">#Hono #CloudflareWorkers #D1 #Vue</p>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="https://misskey-host.cloud" target="_blank" rel="noopener noreferrer">
+                <div class="card-top"><span class="card-no">05</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">Misskey-host.cloud<span class="card-arrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-arrow" /></svg></span></h3>
+                <p class="card-host">misskey-host.cloud</p>
+                <p class="card-desc">Misskey サーバーの構築・更新・保守を代行するサービス。毎時バックアップと xxxx.misskey.one 形式の URL を提供しています。</p>
+                <p class="card-tags">#Misskey #Hosting #Linux</p>
+              </a>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card-top"><span class="card-no">06</span><span class="badge">In progress</span></div>
+                <h3 class="card-title">AI ルール共有サービス</h3>
+                <p class="card-host">開発中</p>
+                <p class="card-desc">AI に渡すルールやコンテキストを、チームで管理・再利用できるようにするサービス。</p>
+                <p class="card-tags">#Next.js #oRPC #D1 #R2</p>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card-top"><span class="card-no">07</span><span class="badge badge-active">Active</span></div>
+                <h3 class="card-title">自宅サーバー</h3>
+                <p class="card-host">Raspberry Pi</p>
+                <p class="card-desc">Raspberry Pi 4B 1台から始めた自宅サーバー。Misskey で同時接続60人を超え、WordPress や照明の IoT なども動かしてきました。</p>
+                <p class="card-tags">#RaspberryPi #Linux #CloudflareTunnel</p>
+              </div>
+            </li>
+            <li>
+              <a class="card card-ended" href="https://github.com/Type4ny-Project/Type4ny" target="_blank" rel="noopener noreferrer">
+                <div class="card-top"><span class="card-no">08</span><span class="badge">Archived</span></div>
+                <h3 class="card-title">Type4ny<span class="card-arrow"><svg width="14" height="14" aria-hidden="true"><use href="#i-arrow" /></svg></span></h3>
+                <p class="card-host">github.com</p>
+                <p class="card-desc">自作の Misskey フォーク。ゲーミングモードなどの独自機能を実装し、Misskey-host.cloud の全サーバーで使われていました。</p>
+                <p class="card-tags">#TypeScript #Vue #Misskey #OSS</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="reveal" aria-labelledby="skills-title">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">04 / Skills</p>
+              <h2 id="skills-title">技術スタック</h2>
+            </div>
+            <span class="section-index" aria-hidden="true">04</span>
+          </header>
+
+          <p class="skills-note"><span class="chip chip-strong">強調</span> は特に得意なものです。</p>
+          <div class="skills" data-skills>
+            <div class="skill-row">
+              <h3>Frontend</h3>
+              <ul class="chips">
+                <li class="chip chip-strong">TypeScript</li><li class="chip chip-strong">Vue / Nuxt</li><li class="chip">React</li><li class="chip">Next.js</li><li class="chip">Svelte</li><li class="chip">HTML / CSS</li>
+              </ul>
+            </div>
+            <div class="skill-row">
+              <h3>Backend</h3>
+              <ul class="chips">
+                <li class="chip chip-strong">Node.js</li><li class="chip">Hono</li><li class="chip">oRPC</li><li class="chip">NestJS</li><li class="chip">Java / Spring Boot</li><li class="chip">Kotlin</li><li class="chip">PHP</li>
+              </ul>
+            </div>
+            <div class="skill-row">
+              <h3>Infra</h3>
+              <ul class="chips">
+                <li class="chip chip-strong">Linux</li><li class="chip">Nginx</li><li class="chip">Docker</li><li class="chip">Kubernetes</li><li class="chip">Terraform</li>
+              </ul>
+            </div>
+            <div class="skill-row">
+              <h3>Cloud</h3>
+              <ul class="chips">
+                <li class="chip chip-strong">Cloudflare Workers</li><li class="chip">D1 / R2 / KV / Queues</li><li class="chip">AWS</li><li class="chip">Azure</li><li class="chip">Google Cloud</li>
+              </ul>
+            </div>
+            <div class="skill-row">
+              <h3>Data</h3>
+              <ul class="chips">
+                <li class="chip">PostgreSQL</li><li class="chip">Redis</li><li class="chip">AlloyDB</li>
+              </ul>
+            </div>
+            <div class="skill-row">
+              <h3>AI · DevOps</h3>
+              <ul class="chips">
+                <li class="chip">OpenAI API</li><li class="chip">Workers AI</li><li class="chip">Git</li><li class="chip">GitHub Actions</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline" class="reveal" aria-labelledby="timeline-title">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">05 / Timeline</p>
+              <h2 id="timeline-title">経歴</h2>
+            </div>
+            <span class="section-index" aria-hidden="true">05</span>
+          </header>
+
+          <ol class="timeline">
+            <li data-type="work" data-now>
+              <div class="tl-meta"><time>2025年1月 〜 現在</time><span class="tl-type">Work</span></div>
+              <div>
+                <h3>IT 系企業 — エンジニア（アルバイト）</h3>
+                <p>フロントエンド・バックエンドエンジニアとして、Vue.js・Java・Next.js などを使った開発をしています。</p>
+              </div>
+            </li>
+            <li data-type="work">
+              <div class="tl-meta"><time>2024年7月 〜 2025年8月</time><span class="tl-type">Work</span></div>
+              <div>
+                <h3>株式会社9ineverse — Fedi-host 事業部（業務委託）</h3>
+                <p>Fediverse 関連のホスティング事業で、Web アプリや決済まわりの開発、Azure・Kubernetes を使ったインフラの構築・運用を担当しました。</p>
+              </div>
+            </li>
+            <li data-type="edu" data-now>
+              <div class="tl-meta"><time>2024年4月 〜 現在</time><span class="tl-type">Education</span></div>
+              <div>
+                <h3>S高等学校 — 入学</h3>
+                <p>2027年3月に卒業予定です。</p>
+              </div>
+            </li>
+            <li data-type="oss" data-now>
+              <div class="tl-meta"><time>2023年 〜 現在</time><span class="tl-type">OSS</span></div>
+              <div>
+                <h3>Misskey.io — 開発者</h3>
+                <p>Misskey.io の開発に参加し、機能改善や不具合修正を続けています。</p>
+              </div>
+            </li>
+            <li data-type="oss" data-now>
+              <div class="tl-meta"><time>2023年10月 〜 現在</time><span class="tl-type">OSS</span></div>
+              <div>
+                <h3>Misskey-dev — コントリビューター</h3>
+                <p>Misskey の開発に正式に参加。PWA で画面が真っ白になる問題（Issue #16951）の修正などがマージされています。</p>
+              </div>
+            </li>
+            <li data-type="oss" data-now>
+              <div class="tl-meta"><time>2023年9月 〜 現在</time><span class="tl-type">OSS</span></div>
+              <div>
+                <h3>PrisMisskey.space 開設 / Type4ny 開発開始</h3>
+                <p>自作フォーク Type4ny を作り、PrisMisskey.space として運営を始めました。</p>
+              </div>
+            </li>
+            <li data-type="oss" data-now>
+              <div class="tl-meta"><time>2022年12月 〜 現在</time><span class="tl-type">OSS</span></div>
+              <div>
+                <h3>mattyaski.co — SNS サーバー開設</h3>
+                <p>Misskey サーバー「まっちゃすきー。」を開設。障害を乗り越えながら運用の知見を積んできました。</p>
+              </div>
+            </li>
+            <li data-type="personal" data-now>
+              <div class="tl-meta"><time>2021年11月 〜 現在</time><span class="tl-type">Personal</span></div>
+              <div>
+                <h3>自宅サーバー運用開始 / ブログ開設</h3>
+                <p>Raspberry Pi 4B 1台から自宅サーバーを始め、同時に技術ブログ nanasi-apps.xyz を開設しました。</p>
+              </div>
+            </li>
+            <li data-type="personal">
+              <div class="tl-meta"><time>小学生の頃</time><span class="tl-type">Personal</span></div>
+              <div>
+                <h3>プログラミングを始める</h3>
+                <p>PHP などで Web アプリケーションを作り始めました。</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="eyebrow">06 / Links</p>
+        <h2 class="footer-title">Fediverse や GitHub で<br />活動しています。</h2>
+        <ul class="footer-links">
+          <li><a href="https://github.com/mattyatea" target="_blank" rel="noopener noreferrer"><span class="footer-icon"><svg width="16" height="16" aria-hidden="true"><use href="#i-github" /></svg></span><span><b>GitHub</b><small>github.com/mattyatea</small></span><svg class="footer-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a></li>
+          <li><a href="https://mattyaski.co/@mattyatea" target="_blank" rel="noopener noreferrer"><span class="footer-icon"><svg width="16" height="16" aria-hidden="true"><use href="#i-globe" /></svg></span><span><b>mattyaski.co</b><small>@mattyatea@mattyaski.co</small></span><svg class="footer-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a></li>
+          <li><a href="https://prismisskey.space/@mattyatea" target="_blank" rel="noopener noreferrer"><span class="footer-icon"><svg width="16" height="16" aria-hidden="true"><use href="#i-star" /></svg></span><span><b>PrisMisskey</b><small>@mattyatea@prismisskey.space</small></span><svg class="footer-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a></li>
+          <li><a href="https://nanasi-apps.xyz" target="_blank" rel="noopener noreferrer"><span class="footer-icon"><svg width="16" height="16" aria-hidden="true"><use href="#i-book" /></svg></span><span><b>Blog</b><small>nanasi-apps.xyz</small></span><svg class="footer-arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a></li>
+        </ul>
+        <div class="footer-bottom">
+          <p>© <span data-year>2026</span> mattyatea</p>
+          <p>Plain HTML + CSS on Cloudflare Workers</p>
+        </div>
+      </div>
+    </footer>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7" /><path d="M8 7h9v9" /></symbol>
+    </svg>
+  </body>
+</html>
