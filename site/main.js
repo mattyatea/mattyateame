@@ -15,28 +15,23 @@ for (const el of document.querySelectorAll("[data-year]")) {
 	el.textContent = String(today.getFullYear());
 }
 
-// 年表の見せ方を切り替える。?tl=rail で図の形から始める
-const timeline = document.querySelector("life-timeline");
-const switches = document.querySelectorAll(".tl-switch [data-variant]");
+// 運営しているサーバーの数字を NodeInfo から読み込む。
+// 読み込めないときは HTML に書いてある数字のまま残す
+for (const card of document.querySelectorAll("[data-misskey]")) {
+	const field = (name) => card.querySelector(`[data-field="${name}"]`);
 
-function setVariant(variant) {
-	timeline?.setAttribute("variant", variant);
-	for (const button of switches) {
-		button.setAttribute(
-			"aria-pressed",
-			String(button.dataset.variant === variant),
-		);
-	}
-}
-
-const initial = new URLSearchParams(location.search).get("tl");
-if (initial === "list" || initial === "rail") setVariant(initial);
-
-for (const button of switches) {
-	button.addEventListener("click", () => {
-		setVariant(button.dataset.variant);
-		const url = new URL(location.href);
-		url.searchParams.set("tl", button.dataset.variant);
-		history.replaceState(null, "", url);
-	});
+	fetch(`https://${card.dataset.misskey}/nodeinfo/2.1`)
+		.then((res) => {
+			if (!res.ok) throw new Error(String(res.status));
+			return res.json();
+		})
+		.then((info) => {
+			field("users").textContent = info.usage.users.total.toLocaleString();
+			field("notes").textContent = info.usage.localPosts.toLocaleString();
+			field("version").textContent = info.software.version;
+			const status = field("status");
+			status.textContent = "稼働中";
+			status.classList.add("is-up");
+		})
+		.catch(() => {});
 }
