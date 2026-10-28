@@ -538,8 +538,9 @@ class PhotoStack extends HTMLElement {
 		if (!top || this.leaving) return;
 		this.leaving = true;
 		const len = Math.hypot(dx, dy) || 1;
-		const far = Math.max(window.innerWidth, 900);
-		top.style.transform = `translate(${(dx / len) * far}px, ${(dy / len) * far}px) rotate(${(dx / len) * 30}deg)`;
+		// 飛ばす距離は写真の大きさに合わせる。画面の幅で飛ばすと、下へ払ったときにページが縦に伸びる
+		const { width, height } = top.getBoundingClientRect();
+		top.style.transform = `translate(${(dx / len) * width * 1.2}px, ${(dy / len) * height * 1.5}px) rotate(${(dx / len) * 30}deg)`;
 		top.style.opacity = "0";
 		setTimeout(() => {
 			// いちばん下へ移すときは、飛んでいった位置から戻ってこないように一度アニメーションを止める
