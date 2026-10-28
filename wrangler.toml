@@ -1,8 +1,9 @@
 name = "mattyateame"
-compatibility_date = "2025-01-26"
+main = "worker.js"
+compatibility_date = "2026-10-01"
 
 [assets]
-directory = "./dist"
+directory = "./site"
 
 [observability]
 enabled = true

@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>まっちゃてぃー。</title>
+    <meta name="description" content="まっちゃてぃー。(@mattyatea) のポートフォリオです。Misskey の開発とサーバーの運営をしながら、高校に通い IT 企業でエンジニアとして働いています。" />
+    <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121311" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://mattyatea.me/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="まっちゃてぃー。" />
+    <meta property="og:description" content="Misskey の開発とサーバーの運営をしながら、高校に通い IT 企業でエンジニアとして働いています。" />
+    <meta property="og:url" content="https://mattyatea.me" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="mattyatea.me" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://mattyaski.co/avatar/@mattyatea" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/main.js" defer></script>
+    <script src="/timeline.js" type="module"></script>
+    <script src="/photos.js" type="module"></script>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap bar-inner">
+        <a class="logo" href="#top">mattyatea.me</a>
+        <nav aria-label="ページ内">
+          <a href="#works">作ったもの</a>
+          <a href="#history">これまで</a>
+          <a href="#writing">書いたもの</a>
+          <a href="#photos">写真</a>
+          <a href="#contact">連絡先</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <div class="hero-text">
+          <img class="avatar" src="https://mattyaski.co/avatar/@mattyatea" alt="まっちゃてぃー。のアイコン アニメ調の女の子の画像" width="88" height="88" />
+          <h1>まっちゃてぃー。</h1>
+          <p class="handle">@mattyatea</p>
+          <p class="hero-lead">
+            高校に通いながら、いくつかの会社でエンジニアとして働いています。<br />
+            9歳のとき 3DS の SmileBASIC でプログラムを書き始め、<br />
+            14歳のときに自分の Misskey サーバーを立ち上げました。
+          </p>
+          <p class="buttons">
+            <a href="https://github.com/mattyatea"><svg class="icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>GitHub</a>
+            <a href="https://nanasi-apps.xyz">ブログ（自分で運営）</a>
+            <a href="https://zenn.dev/mattyatea">Zenn</a>
+            <a href="https://note.com/mattyatea">note</a>
+            <a href="https://qiita.com/mattyatea">Qiita</a>
+          </p>
+          <ul class="accounts">
+            <li>
+              <a href="https://mattyaski.co/@mattyatea">
+                <img src="https://files.mattyaski.co/null/5d0ecddf-7898-4a32-a1c2-f74547600f15.png" alt="" width="40" height="40" />
+                <span><small>ActivityPub（まっちゃすきー。）</small>@mattyatea@mattyaski.co</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://prismisskey.space/@mattyatea">
+                <img src="https://files.prismisskey.space/misskey/8249062c-bc06-4138-a824-9c50abfb357a.webp" alt="" width="40" height="40" />
+                <span><small>ActivityPub（PrisMisskey）</small>@mattyatea@prismisskey.space</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <dl class="profile">
+          <div><dt>年齢</dt><dd><span data-age>18</span>歳</dd></div>
+          <div><dt>仕事</dt><dd>エンジニア</dd></div>
+          <div><dt>学校</dt><dd>S高等学校</dd></div>
+          <div><dt>所属</dt><dd>misskey-dev / MisskeyHQ</dd></div>
+          <div><dt>よく書く</dt><dd>TypeScript</dd></div>
+        </dl>
+      </section>
+
+      <section class="wrap section" aria-labelledby="now">
+        <h2 id="now">いま</h2>
+        <div class="now">
+          <article>
+            <h3>仕事</h3>
+            <p>
+              2025年1月から IT 企業でアルバイトとして働いています。<br />
+              インフラを触ったり、フィードバックをもとにバグを直したり、機能や改善を提案したりしています。<br />
+              新規開発で、設計から関わったこともあります。<br />
+              2026年9月からは、いろいろな会社でインターンとして働かせてもらっています。
+            </p>
+          </article>
+          <article>
+            <h3>OSS</h3>
+            <p>
+              misskey-dev と、70万人以上のユーザーがいる Misskey.io の開発に参加しています。<br />
+              Misskey.io では上流の変更のマージも担当していて、コアメンバーに近い動きをしています。
+            </p>
+          </article>
+          <article>
+            <h3>Fediverse のサーバー運用</h3>
+            <p>オープンソースの SNS である Misskey のサーバーを2つ運営しています。</p>
+            <ul class="dots">
+              <li><a href="https://mattyaski.co">まっちゃすきー。</a></li>
+              <li><a href="https://prismisskey.space">PrisMisskey</a></li>
+            </ul>
+            <p>Misskey のホスティングサービス <a href="https://nanasphere.7si.app">nanasphere</a> では、十数台のサーバーの管理を担当しています。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" aria-labelledby="works">
+        <h2 id="works">作ったもの・動かしているもの</h2>
+
+        <div class="servers">
+          <article class="server" data-misskey="mattyaski.co">
+            <div class="server-banner">
+              <img src="https://files.mattyaski.co/null/e6d37b78-3434-498f-acfc-8f18bd2d07cf.jpg" alt="夕焼けの空と観覧車の写真" loading="lazy" width="1000" height="450" />
+            </div>
+            <div class="server-body">
+              <div class="server-head">
+                <img src="https://files.mattyaski.co/null/5d0ecddf-7898-4a32-a1c2-f74547600f15.png" alt="" width="40" height="40" />
+                <div>
+                  <h3><a href="https://mattyaski.co">まっちゃすきー。</a></h3>
+                  <p class="url">mattyaski.co</p>
+                </div>
+              </div>
+              <p>
+                14歳で立ち上げた最初の自分の Misskey サーバーです。<br />
+                どんな話題でも歓迎の汎用サーバーとして運営しています。
+              </p>
+              <dl class="stats">
+                <div><dt>登録ユーザー数</dt><dd data-field="users">4,020</dd></div>
+                <div><dt>投稿数</dt><dd data-field="notes">266,619</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="server" data-misskey="prismisskey.space">
+            <div class="server-banner is-logo">
+              <img src="https://files.prismisskey.space/misskey/f16f1742-4888-47de-b8b4-6d67431bec45.webp" alt="PrisMisskey のロゴ" loading="lazy" width="2048" height="512" />
+            </div>
+            <div class="server-body">
+              <div class="server-head">
+                <img src="https://files.prismisskey.space/misskey/8249062c-bc06-4138-a824-9c50abfb357a.webp" alt="" width="40" height="40" />
+                <div>
+                  <h3><a href="https://prismisskey.space">PrisMisskey</a></h3>
+                  <p class="url">prismisskey.space</p>
+                </div>
+              </div>
+              <p>
+                自作フォーク Type4ny で動かしている Misskey サーバーです。<br />
+                ロゴも自分で作りました。
+              </p>
+              <dl class="stats">
+                <div><dt>登録ユーザー数</dt><dd data-field="users">1,202</dd></div>
+                <div><dt>投稿数</dt><dd data-field="notes">965,212</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects">
+          <article class="project is-wide">
+            <p class="repo">misskey-dev/misskey ・ MisskeyIO/misskey</p>
+            <h3>Misskey への貢献</h3>
+            <p>
+              misskey-dev/misskey に4件、Misskey.io に48件の PR がマージされています。<br />
+              misskey-dev/misskey にマージされた PR は次の4件です。
+            </p>
+            <ul class="prs">
+              <li><a href="https://github.com/misskey-dev/misskey/pull/12031">#12031</a><span>サーバーサイレンス機能を追加</span><time datetime="2023-10-16">2023.10</time></li>
+              <li><a href="https://github.com/misskey-dev/misskey/pull/12172">#12172</a><span>リモートユーザーを更新できるように</span><time datetime="2023-10-29">2023.10</time></li>
+              <li><a href="https://github.com/misskey-dev/misskey/pull/16952">#16952</a><span>Service Worker でオフライン時の fetch にタイムアウトを入れる</span><time datetime="2025-12-10">2025.12</time></li>
+              <li><a href="https://github.com/misskey-dev/misskey/pull/16971">#16971</a><span>Service Worker の Auto Preload をオプトアウトする</span><time datetime="2025-12-12">2025.12</time></li>
+            </ul>
+            <p class="more"><a href="https://github.com/MisskeyIO/misskey/pulls?q=is%3Apr+author%3Amattyatea+is%3Amerged">Misskey.io の PR を見る</a></p>
+          </article>
+
+          <article class="project">
+            <p class="repo">mattyatea/ActivityPub-Relay</p>
+            <h3><a href="https://github.com/mattyatea/ActivityPub-Relay">ActivityPub-Relay</a></h3>
+            <p>
+              Fediverse のサーバー同士をつなぐリレーです。<br />
+              Cloudflare Workers の上で動きます。
+            </p>
+            <ul class="tags"><li>TypeScript</li><li>Hono</li><li>Cloudflare Workers</li></ul>
+          </article>
+
+          <article class="project">
+            <p class="repo">Type4ny-Project/Misskey</p>
+            <h3><a href="https://github.com/Type4ny-Project/Misskey">Type4ny</a></h3>
+            <p>
+              15歳の時から作っている Misskey のフォークです。<br />
+              2026年からは最新の Misskey をもとに作り直し、ゲーミングモードなどの独自機能を載せ直しています。<br />
+              一度まっさらな状態から始め直すため、元のリポジトリはアーカイブしました。
+            </p>
+            <ul class="tags"><li>TypeScript</li><li>Vue</li><li>Node.js</li></ul>
+          </article>
+
+          <article class="project">
+            <p class="repo">nanasphere.7si.app</p>
+            <h3><a href="https://nanasphere.7si.app">nanasphere</a></h3>
+            <p>
+              Misskey を運営したい人のためのマネージドホスティングです。<br />
+              十数台のサーバーの運営を手伝っています。
+            </p>
+            <ul class="tags"><li>Kubernetes</li><li>Cloudflare</li></ul>
+          </article>
+
+          <article class="project">
+            <p class="repo">mattyatea/mattyateame</p>
+            <h3><a href="https://github.com/mattyatea/mattyateame">このサイト</a></h3>
+            <p>
+              HTML と CSS だけで書いています。<br />
+              下の年表は Web Components で作りました。
+            </p>
+            <ul class="tags"><li>HTML</li><li>Web Components</li><li>Cloudflare Workers</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" aria-labelledby="skills">
+        <h2 id="skills">使える技術</h2>
+        <dl class="skills">
+          <div><dt>言語</dt><dd><ul class="tags"><li class="is-main">TypeScript</li><li>Java</li><li>Kotlin</li><li>Go</li><li>Python</li><li>PHP</li></ul></dd></div>
+          <div><dt>フロントエンド</dt><dd><ul class="tags"><li>Vue / Nuxt</li><li>React / Next.js</li></ul></dd></div>
+          <div><dt>バックエンド</dt><dd><ul class="tags"><li class="is-main">Node.js</li><li>Hono</li><li>Spring Boot</li><li>Laravel</li><li>Go</li></ul></dd></div>
+          <div><dt>データストア</dt><dd><ul class="tags"><li>PostgreSQL</li><li>Redis / Valkey / Dragonfly</li><li>Cloudflare KV</li></ul></dd></div>
+          <div><dt>インフラ</dt><dd><ul class="tags"><li class="is-main">Linux</li><li>Cloudflare Workers</li><li>AWS</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Nginx</li><li>Terraform</li></ul></dd></div>
+          <div><dt>そのほか</dt><dd>機械学習は、業務で触ったことがある程度です。</dd></div>
+        </dl>
+      </section>
+
+      <section class="wrap section" aria-labelledby="history">
+        <h2 id="history">これまで</h2>
+        <life-timeline class="measure" birth="2008-07-03">
+          <life-age age="9">
+            <life-event>
+              <time slot="when" datetime="2018">2018年ごろ</time>
+              <p>
+                3DS の SmileBASIC ではじめてプログラムを書く。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="10">
+            <life-event>
+              <time slot="when" datetime="2019">2019年ごろ</time>
+              <p>
+                PHP で Web アプリの作成などを行った。<br />
+                当時はメモ帳で書いていた。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="13">
+            <life-event>
+              <time slot="when" datetime="2021-11">2021年11月</time>
+              <p>
+                部屋に Raspberry Pi 4B（4GB）を1台置き、自宅サーバーを始める。<br />
+                コードもこの Raspberry Pi の上で VS Code を使って書いていた。<br />
+                WordPress の公開や、サーバーからの部屋の照明の操作もしていた。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2021-11">2021年11月</time>
+              <p>
+                技術ブログ <a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a> を開設。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2022-04">2022年4月</time>
+              <p>
+                はじめて Misskey のサーバーを立てる。<br />
+                このサーバーはすぐに閉じた。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="14">
+            <life-event>
+              <time slot="when" datetime="2022-12">2022年12月</time>
+              <p>
+                自分の Misskey サーバー「まっちゃすきー。」（<a href="https://mattyaski.co">mattyaski.co</a>）を開設。<br />
+                データベースの破損やファイルサーバーの消失も経験した。<br />
+                運営の大変さと面白さを、ここで知った。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-01">2023年1月</time>
+              <p>
+                友人からパソコンを支援してもらう。<br />
+                もらった当時はゲームに明け暮れていた。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-01">2023年1月</time>
+              <p>
+                GitHub にはじめてコードをコミットする。<br />
+                Misskey の bot「NullcatChan」を動くように直した。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-04">2023年春ごろ</time>
+              <p>
+                まっちゃすきー。の同時接続が60人を超える。<br />
+                2023年3月には1日に91人が利用。<br />
+                延べ登録者は約4,000人。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="15">
+            <life-event>
+              <time slot="when" datetime="2023">2023年ごろ</time>
+              <p>
+                Cloudflare Workers を触り始める。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-09">2023年9月</time>
+              <p>
+                TypeScript と Vue を使い、Misskey のフォーク <a href="https://github.com/Type4ny-Project/Type4ny">Type4ny</a> を作る。<br />
+                Type4ny で <a href="https://prismisskey.space">PrisMisskey</a> の運営を始める。<br />
+                ゲーミングモードなどの独自機能を実装した。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2023-10">2023年10月</time>
+              <p>
+                misskey-dev/misskey に PR が2件マージされる。
+              </p>
+              <ul class="dots">
+                <li><a href="https://github.com/misskey-dev/misskey/pull/12031">#12031 サーバーサイレンス機能を追加</a></li>
+                <li><a href="https://github.com/misskey-dev/misskey/pull/12172">#12172 リモートユーザーを更新できるように</a></li>
+              </ul>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2024-04">2024年4月</time>
+              <p>
+                S高等学校に入学。<br />
+                2027年3月卒業予定。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="16">
+            <life-event>
+              <time slot="when" datetime="2024-07">2024年7月〜2025年8月</time>
+              <p>
+                株式会社9ineverseに執行役員として参画。<br />
+                Fediverse のホスティング事業「FediHost」の立ち上げに加わる。<br />
+                Azure と Kubernetes のインフラの運用と、決済が済むと Kubernetes にデプロイされる仕組みの構築を担当。<br />
+                Azure の VM の上に Kubernetes のクラスターを組んだのも、この仕事のひとつ。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2024-07">2024年7月</time>
+              <p>
+                Misskey.io の開発に参加。<br />
+                ロールでリアクションを制御する機能や Elasticsearch での検索などを実装し、48件の PR がマージされている。<br />
+                上流の更新を取り込むときに出た約300件の競合を、1か月ほどかけて解消した。
+              </p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2025-01">2025年1月〜</time>
+              <p>
+                IT 企業にアルバイトとして入社。<br />
+                Java や Kotlin、Laravel、React で、業務システムや AI を使った SaaS、社内ツールを開発。<br />
+                インフラなども担当。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="17">
+            <life-event>
+              <time slot="when" datetime="2025-12">2025年12月</time>
+              <p>
+                PWA でインストールした Misskey が、特定の条件で真っ白な画面のまま止まる問題を <a href="https://github.com/misskey-dev/misskey/issues/16951">Issue #16951</a> で報告。<br />
+                Chromium のバグだと切り分け、<a href="https://issues.chromium.org/issues/466790291">Chromium にも報告</a>した。<br />
+                影響が大きかったため、気づいてから数時間で原因を切り分け、暫定の対策として Service Worker を直す PR を出した。
+              </p>
+              <ul class="dots">
+                <li><a href="https://github.com/misskey-dev/misskey/pull/16952">misskey-dev/misskey #16952</a></li>
+                <li><a href="https://github.com/misskey-dev/misskey/pull/16971">misskey-dev/misskey #16971</a></li>
+                <li><a href="https://github.com/MisskeyIO/misskey/pull/1185">MisskeyIO/misskey #1185</a></li>
+                <li><a href="https://github.com/MisskeyIO/misskey/pull/1198">MisskeyIO/misskey #1198</a></li>
+                <li>自分のフォーク</li>
+              </ul>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2026-02">2026年2月</time>
+              <p>
+                Type4ny を最新の Misskey をもとに作り直し始める。<br />
+                これまでの独自機能の差分を取り出し、最新の Misskey に実装をし直す。<br />
+                一度まっさらな状態から始め直すため、元のリポジトリはアーカイブ。
+              </p>
+            </life-event>
+          </life-age>
+          <life-age age="18">
+            <life-event>
+              <time slot="when" datetime="2026-09">2026年9月</time>
+              <p>金融系スタートアップにインターンとして参画。</p>
+            </life-event>
+            <life-event>
+              <time slot="when" datetime="2026-09">2026年9月</time>
+              <p>とある上場企業にインターンとして参画し、今に至る。</p>
+            </life-event>
+          </life-age>
+        </life-timeline>
+      </section>
+
+      <section class="wrap section" aria-labelledby="writing">
+        <h2 id="writing">書いたもの</h2>
+        <p class="measure">
+          自分で運営しているブログ <a href="https://nanasi-apps.xyz/posts">nanasi-apps.xyz</a> には、Misskey の構築や運用の記事を中心に22本書いています。<br />
+          <a href="https://zenn.dev/mattyatea">Zenn</a>、<a href="https://note.com/mattyatea">note</a>、<a href="https://qiita.com/mattyatea">Qiita</a> にも書いています。
+        </p>
+        <ul class="posts">
+          <li><time datetime="2026-09-07">2026.09</time><span class="src">Zenn</span><a href="https://zenn.dev/spookies/articles/09a7d61dfb8a14">Agentic Loopをゼロから組んでみる</a></li>
+          <li><time datetime="2026-07-03">2026.07</time><span class="src">note</span><a href="https://note.com/mattyatea/n/nd499828fdcb9">18歳になる前に、これまでの人生を振り返って (ポエム)</a></li>
+          <li><time datetime="2026-06-30">2026.06</time><span class="src">note</span><a href="https://note.com/mattyatea/n/n509037f5a22f">趣味でもドーパミン駆動開発（DDD）をするべきでない</a></li>
+          <li><time datetime="2026-06-21">2026.06</time><span class="src">Zenn</span><a href="https://zenn.dev/mattyatea/articles/6b7e6c0d6ef3e7">AIをプロジェクトマネージャーにしてはいけない(戒め)</a></li>
+          <li><time datetime="2026-04-01">2026.04</time><span class="src">Qiita</span><a href="https://qiita.com/mattyatea/items/f8fbc1dc7ff3ed607b10">Cloudflare VPC を Workers Bind で使っているWebアプリを GitHub Actions からデプロイするときのハマりどころ - 備忘録</a></li>
+          <li><time datetime="2025-12-01">2025.12</time><span class="src">Qiita</span><a href="https://qiita.com/mattyatea/items/ecef13d63d5d38f4ac00">ViteのHotReloadと1Password Environmentを使用している環境で、開発環境が無限リスタートする - 備忘録</a></li>
+          <li><time datetime="2025-08-14">2025.08</time><span class="src">Zenn</span><a href="https://zenn.dev/mattyatea/articles/0f416170781cba">MCPサーバーをVibe Codingで作ってみたら意外と動いた話</a></li>
+          <li><time datetime="2025-04-13">2025.04</time><span class="src">Blog</span><a href="https://nanasi-apps.xyz/posts/esa-mcp-server">esaの情報をいい感じに使ってくれるmcp serverを作った</a></li>
+          <li><time datetime="2025-03-09">2025.03</time><span class="src">Blog</span><a href="https://nanasi-apps.xyz/posts/immich-k8s-deploy">Immich をk8sに構築する</a></li>
+          <li><time datetime="2024-10-08">2024.10</time><span class="src">Blog</span><a href="https://nanasi-apps.xyz/posts/bun-k8s-client-okasii">Bun で @kubernetes/client-node を使用する際に UNABLE_TO_VERIFY_LEAF_SIGNATURE が発生する問題の解決法</a></li>
+          <li><time datetime="2024-01-23">2024.01</time><span class="src">Blog</span><a href="https://nanasi-apps.xyz/posts/What-is-Misskey">分散型SNS、Misskeyって何？</a></li>
+          <li><time datetime="2023-03-22">2023.03</time><span class="src">Blog</span><a href="https://nanasi-apps.xyz/posts/Misskey-oldremotenote">Misskey v12以降に生まれた悲しい怪物(誰からも反応のないリモート投稿)を削除するSQL</a></li>
+        </ul>
+      </section>
+
+      <section class="wrap section" aria-labelledby="photos">
+        <h2 id="photos">撮った写真</h2>
+        <div class="photos">
+          <p>
+            風景や花の写真を撮っています。
+          </p>
+          <photo-stack>
+            <img src="/photos/sunflower.jpg" alt="オレンジ色のヒマワリの写真" data-caption="撮影 2026.08" width="1800" height="810" loading="lazy" />
+            <img src="/photos/coast.jpg" alt="曇り空の下の海岸と緑の丘の写真" data-caption="撮影 2026.07" width="1800" height="810" loading="lazy" />
+            <img src="/photos/sunset.jpg" alt="夕焼けの空と観覧車の写真" data-caption="まっちゃすきー。のバナーにも使っている写真" width="1000" height="450" loading="lazy" />
+            <img src="/photos/red-brick.jpg" alt="横浜赤レンガ倉庫と手前の植え込みの写真" data-caption="撮影 2026.08 横浜" width="1800" height="810" loading="lazy" />
+            <img src="/photos/petunia.jpg" alt="紫と白のペチュニアの写真" data-caption="撮影 2026.08" width="1800" height="810" loading="lazy" />
+          </photo-stack>
+        </div>
+      </section>
+
+      <section class="wrap section" aria-labelledby="me">
+        <h2 id="me">人となり</h2>
+        <div class="measure">
+          <p>
+            動くものを作るのが好きで、作っては壊すことをずっと繰り返しています。<br />
+            それでも、保守にもスリルがあって面白いと思っています。<br />
+            自分の SNS を何年も運営してきたので、この先どうしていくかを念頭に置きながら動く癖があります。
+          </p>
+        </div>
+      </section>
+
+      <section class="wrap section" aria-labelledby="contact">
+        <h2 id="contact">連絡先</h2>
+        <p class="measure">
+          技術の話も雑談もお仕事の相談も歓迎です。<br />
+          Misskey と GitHub にいます。
+        </p>
+        <ul class="contact">
+          <li><span>Misskey</span><a href="https://mattyaski.co/@mattyatea">@mattyatea@mattyaski.co</a></li>
+          <li><span>Misskey</span><a href="https://prismisskey.space/@mattyatea">@mattyatea@prismisskey.space</a></li>
+          <li><span>GitHub</span><a href="https://github.com/mattyatea">github.com/mattyatea</a></li>
+          <li><span>Blog</span><a href="https://nanasi-apps.xyz">nanasi-apps.xyz</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="wrap">© <span data-year>2026</span> mattyatea</footer>
+  </body>
+</html>
