@@ -318,11 +318,6 @@ h3 {
 }
 
 h3 a {
-	color: inherit;
-	text-decoration: none;
-}
-
-h3 a:hover {
 	color: var(--accent);
 }
 
@@ -407,47 +402,38 @@ h3 a:hover {
 	padding: 20px 22px 22px;
 }
 
-.status {
-	color: var(--sub);
-	font-family: var(--mono);
-	font-size: 12px;
-}
-
-.status::before {
-	content: "";
-	display: inline-block;
-	width: 8px;
-	height: 8px;
-	margin-right: 8px;
-	border-radius: 50%;
-	background: var(--sub);
-	vertical-align: 0.05em;
-}
-
-.status.is-up::before {
-	background: #3fb950;
-	box-shadow: 0 0 0 3px rgb(63 185 80 / 0.2);
-}
-
 .server h3 {
-	margin-top: 6px;
 	font-size: 20px;
 }
 
+.server-head {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.server-head img {
+	flex: none;
+	width: 44px;
+	height: 44px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
 .url {
-	margin-bottom: 10px;
 	color: var(--sub);
 	font-family: var(--mono);
 	font-size: 13px;
 }
 
-.server-body > p:not(.status, .url) {
+.server-body > p:not(.url) {
 	font-size: 15px;
 }
 
 .stats {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	margin-top: 18px;
 	border-top: 1px solid var(--line);
 }
@@ -636,6 +622,19 @@ photo-stack:not(:defined) img {
 	border-radius: 10px;
 }
 
+/* 点の箇条書き */
+
+.dots {
+	margin-block: 6px;
+	padding-left: 1.2em;
+	list-style: disc;
+	font-size: 15px;
+}
+
+.dots li::marker {
+	color: var(--sub);
+}
+
 /* 書いたもの */
 
 .posts {
@@ -645,7 +644,8 @@ photo-stack:not(:defined) img {
 
 .posts li {
 	display: grid;
-	gap: 0 20px;
+	grid-template-columns: auto 1fr;
+	gap: 0 12px;
 	padding-block: 10px;
 	border-bottom: 1px solid var(--line);
 }
@@ -656,18 +656,24 @@ photo-stack:not(:defined) img {
 	font-size: 13px;
 }
 
-.posts a {
-	color: var(--fg);
-	text-decoration: none;
+.posts .src {
+	color: var(--sub);
+	font-family: var(--mono);
+	font-size: 12px;
+	line-height: 2.1;
 }
 
-.posts a:hover {
-	color: var(--accent);
+.posts a {
+	grid-column: 1 / -1;
 }
 
 @media (min-width: 640px) {
 	.posts li {
-		grid-template-columns: 5rem 1fr;
+		grid-template-columns: 5rem 3.5rem 1fr;
+	}
+
+	.posts a {
+		grid-column: auto;
 	}
 
 	.posts time {

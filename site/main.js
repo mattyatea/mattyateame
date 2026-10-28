@@ -15,23 +15,17 @@ for (const el of document.querySelectorAll("[data-year]")) {
 	el.textContent = String(today.getFullYear());
 }
 
-// 運営しているサーバーの数字を NodeInfo から読み込む。
+// 運営しているサーバーのユーザー数と投稿数を、Worker（worker.js）経由で読み込む。
 // 読み込めないときは HTML に書いてある数字のまま残す
-for (const card of document.querySelectorAll("[data-misskey]")) {
-	const field = (name) => card.querySelector(`[data-field="${name}"]`);
-
-	fetch(`https://${card.dataset.misskey}/nodeinfo/2.1`)
-		.then((res) => {
-			if (!res.ok) throw new Error(String(res.status));
-			return res.json();
-		})
-		.then((info) => {
-			field("users").textContent = info.usage.users.total.toLocaleString();
-			field("notes").textContent = info.usage.localPosts.toLocaleString();
-			field("version").textContent = info.software.version;
-			const status = field("status");
-			status.textContent = "稼働中";
-			status.classList.add("is-up");
-		})
-		.catch(() => {});
-}
+fetch("/api/servers")
+	.then((res) => (res.ok ? res.json() : {}))
+	.then((servers) => {
+		for (const card of document.querySelectorAll("[data-misskey]")) {
+			const server = servers[card.dataset.misskey];
+			if (!server) continue;
+			const field = (name) => card.querySelector(`[data-field="${name}"]`);
+			field("users").textContent = server.users.toLocaleString();
+			field("notes").textContent = server.notes.toLocaleString();
+		}
+	})
+	.catch(() => {});

@@ -367,7 +367,7 @@ const stackSheet = sheet(`
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-	border: 6px solid var(--surface);
+	border: 6px solid #fff;
 	border-radius: 10px;
 	object-fit: cover;
 	box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
@@ -507,7 +507,7 @@ class PhotoStack extends HTMLElement {
 		const dx = e.clientX - d.x;
 		const dy = e.clientY - d.y;
 		if (Math.hypot(dx, dy) > 6) d.moved = true;
-		this.photos[0].style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.05}deg)`;
+		this.photos[0].style.transform = `translate(calc(var(--x) + ${dx}px), calc(var(--y) + ${dy}px)) rotate(calc(var(--r) + ${dx * 0.05}deg))`;
 	}
 
 	onUp(e) {
