@@ -92,6 +92,7 @@ dialog::backdrop {
 	font-size: 22px;
 	line-height: 1;
 	cursor: pointer;
+	transition: background-color 0.2s;
 }
 
 .close:hover {
